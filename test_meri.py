@@ -9,8 +9,8 @@ def main():
     
     # 使用示例数据
     base_path = os.path.dirname(os.path.abspath(__file__))
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'Alfa Laval LKH.pdf')
-    schema_path = os.path.join(base_path, 'data', 'demo_data', 'dummy_schema.json')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'alltext.pdf')
+    schema_path = os.path.join(base_path, 'data', 'demo_data', 'testschema.json')
     
     # 检查文件是否存在
     if not os.path.exists(pdf_path):
@@ -81,14 +81,8 @@ def main():
         print("   3. 检查网络连接")
         return
     
-    # 显示结果
-    print("\n" + "=" * 60)
-    print(" 提取结果：")
-    print("=" * 60)
-    print(json.dumps(populated_schema, indent=2, ensure_ascii=False))
-    
     # 保存结果到文件
-    output_path = os.path.join(base_path, 'output_result.json')
+    output_path = os.path.join(base_path, 'test_output_result.json')
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(populated_schema, f, indent=2, ensure_ascii=False)

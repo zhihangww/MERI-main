@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Data sheet for your equipment/product",
+  "description": "Data sheet for a Counter_currentPlateHeatExchanger equipment",
   "definitions": {
       "bbox": {
           "type": "array",
@@ -58,34 +58,61 @@
           "$ref": "#/definitions/title"
       },
       "technicalSpecifications": {
-          "description": "Technical specifications to extract from the document",
+          "description": "Technical specification for a centrifugal pump",
           "type": "object",
           "properties": {
-              "PARAMETER_1": {
-                  "label": "Parameter 1 display name",
-                  "description": "Detailed description of what parameter 1 represents and what to extract.",
-                  "desiredUnit": "unit if needed, or empty string",
+              "INSIDE_SURFACE_FINISH": {
+                  "label": "Finish of the inside surface",
+                  "description": "The material of the inside surface finish.",
+                  "desiredUnit": "",
                   "type": "object",
                   "properties": {
                       "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                   }
               },
-              "PARAMETER_2": {
-                  "label": "Parameter 2 display name",
-                  "description": "Detailed description of what parameter 2 represents and what to extract.",
-                  "desiredUnit": "unit if needed, or empty string",
+              "INLET_WATER_PRESSURE": {
+                  "label": "Inlet water pressure",
+                  "description": "Water pressure of the inlet circuit for flushed shaft seal",
+                  "desiredUnit": "bar",
                   "type": "object",
                   "properties": {
                       "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                   }
               },
-              "PARAMETER_3": {
-                  "label": "Parameter 3 display name",
-                  "description": "Detailed description of what parameter 3 represents and what to extract.",
-                  "desiredUnit": "unit if needed, or empty string",
+              "LKH10_INLET_PRESSURE": {
+                  "label": "LKH-10 model inlet pressure",
+                  "description": "max inlet pressure of the LKH-10 model",
+                  "desiredUnit": "bar",
                   "type": "object",
                   "properties": {
                       "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                  }
+              },
+              "TEMPERATURE_RANGE": {
+                  "label": "Temperature range",
+                  "description": "Range of the temperature",
+                  "desiredUnit": "degree celcius",
+                  "type": "object",
+                  "properties": {
+                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                  }
+              },
+              "WARRANTY": {
+                  "label": "Warranty of the product",
+                  "description": "Warranty of the product.",
+                  "desiredUnit": "",
+                  "type": "object",
+                  "properties": {
+                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                  }
+              },
+              "FLUSH_MEDIA_TEMPERATURE": {
+                  "label": "Flush media temperature",
+                  "description": "max temperature for flush media",
+                  "desiredUnit": "degree celcius",
+                  "type": "object",
+                  "properties": {
+                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"} 
                   }
               }
           }
@@ -100,4 +127,3 @@
   },
   "required": ["title", "technicalSpecifications", "notFoundList"]
 }
-
