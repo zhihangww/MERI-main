@@ -1,0 +1,16 @@
+{
+	"name": "python3",
+	"build": {
+		"dockerfile": "../docker/dev.Dockerfile"
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [5010],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "poetry install",
+	"runArgs": ["--gpus=all", "--network=host"
+    ],
+
+	"remoteUser": "root"
+}

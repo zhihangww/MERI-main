@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Data sheet for your equipment/product",
+  "definitions": {
+      "bbox": {
+          "type": "array",
+          "items": {
+              "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+      },
+      "pageIndex": {
+          "description": "Index of the page where the attribute is found",
+          "type": "integer"
+      },
+      "title": {
+          "description": "Title of the data sheet, usually the name of the equipment or the model if the name is not available",
+          "type": "object",
+          "properties": {
+              "text": {
+                  "type": "string"
+              },
+              "bbox": {
+                  "$ref": "#/definitions/bbox"
+              },
+              "pageIndex": {
+                  "$ref": "#/definitions/pageIndex"
+              }
+          },
+          "required": ["text", "bbox", "pageIndex"]
+      },
+      "parameter_properties": {
+          "type": "object",
+          "properties": {
+              "value": {
+                  "type": "number"
+              },
+              "text": {
+                  "type": "string"
+              },
+              "unit": {
+                  "type": "string"
+              },
+              "bbox": {
+                  "$ref": "#/definitions/bbox"
+              },
+              "pageIndex": {
+                  "$ref": "#/definitions/pageIndex"
+              }
+          },
+          "required": ["value", "text", "unit", "bbox", "pageIndex"]
+      }
+  },
+  "type": "object",
+  "properties": {
+      "title": {
+          "$ref": "#/definitions/title"
+      },
+      "technicalSpecifications": {
+          "description": "Technical specifications to extract from the document",
+          "type": "object",
+          "properties": {
+              "PARAMETER_1": {
+                  "label": "Parameter 1 display name",
+                  "description": "Detailed description of what parameter 1 represents and what to extract.",
+                  "desiredUnit": "unit if needed, or empty string",
+                  "type": "object",
+                  "properties": {
+                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                  }
+              },
+              "PARAMETER_2": {
+                  "label": "Parameter 2 display name",
+                  "description": "Detailed description of what parameter 2 represents and what to extract.",
+                  "desiredUnit": "unit if needed, or empty string",
+                  "type": "object",
+                  "properties": {
+                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                  }
+              },
+              "PARAMETER_3": {
+                  "label": "Parameter 3 display name",
+                  "description": "Detailed description of what parameter 3 represents and what to extract.",
+                  "desiredUnit": "unit if needed, or empty string",
+                  "type": "object",
+                  "properties": {
+                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                  }
+              }
+          }
+      },
+      "notFoundList": {
+          "description": "List of property names that were not found from the document",
+          "type": "array",
+          "items": {
+              "type": "string"
+          }
+      }
+  },
+  "required": ["title", "technicalSpecifications", "notFoundList"]
+}
+

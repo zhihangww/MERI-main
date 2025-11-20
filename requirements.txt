@@ -1,0 +1,21 @@
+# MERI 项目依赖列表
+# 使用 pip 安装：pip install -r requirements.txt
+
+jupyter>=1.1.1
+docling==2.5.2
+docling-parse==2.0.4
+llama-index>=0.12.0
+litellm>=1.52.10
+ipykernel>=6.29.5
+llama-index-node-parser-docling>=0.3.0
+llama-index-readers-docling>=0.3.0
+llama-index-embeddings-huggingface>=0.4.0
+llama-index-llms-huggingface-api>=0.3.0
+llama-index-readers-file>=0.4.0
+python-dotenv>=1.0.1
+llama-index-llms-litellm>=0.3.0
+pymupdf>=1.24.14
+python-fasthtml>=0.12.0
+aiofiles>=24.1.0
+
+
