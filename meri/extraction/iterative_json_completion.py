@@ -98,7 +98,19 @@ class IterativeJsonPopulator:
             tool_calls = chat_response.choices[0].message.tool_calls
             return json.loads(tool_calls[0].function.arguments)
         except Exception as e:
-            print('Error during schema population iteration: ', e)
+            import traceback
+            error_type = type(e).__name__
+            print(f'Error during schema population iteration ({error_type}): {e}')
+            
+            # Provide specific guidance for rate limit errors
+            if 'RateLimitError' in error_type or 'rate_limit' in str(e).lower():
+                print('\n⚠️  API速率限制错误！')
+                print('  建议解决方案：')
+                print('  1. 等待速率限制重置（见上方错误信息）')
+                print('  2. 升级OpenAI账户以获得更高的速率限制')
+                print('  3. 使用其他API密钥')
+                print('  4. 减小文档大小或使用更小的chunks_max_characters参数\n')
+            
             return populated_dict
 
     def selfsupervised_completion(self, content_chunks):

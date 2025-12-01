@@ -51,4 +51,4 @@ def chat_completion_request(messages, tools=None, tool_choice=None, response_for
     except Exception as e:
         print("Unable to generate ChatCompletion response")
         print(f"Exception: {e}")
-        return e
+        raise  # Re-raise the exception instead of returning it

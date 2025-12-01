@@ -1,166 +1,156 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Data sheet for your equipment/product - 请修改此描述",
-  "definitions": {
-      "bbox": {
-          "type": "array",
-          "items": {
-              "type": "number"
-          },
-          "minItems": 4,
-          "maxItems": 4
-      },
-      "pageIndex": {
-          "description": "Index of the page where the attribute is found",
-          "type": "integer"
-      },
-      "title": {
-          "description": "Title of the data sheet, usually the name of the equipment or the model if the name is not available",
-          "type": "object",
-          "properties": {
-              "text": {
-                  "type": "string"
-              },
-              "bbox": {
-                  "$ref": "#/definitions/bbox"
-              },
-              "pageIndex": {
-                  "$ref": "#/definitions/pageIndex"
-              }
-          },
-          "required": ["text", "bbox", "pageIndex"]
-      },
-      "parameter_properties": {
-          "type": "object",
-          "properties": {
-              "value": {
-                  "type": "number"
-              },
-              "text": {
-                  "type": "string"
-              },
-              "unit": {
-                  "type": "string"
-              },
-              "bbox": {
-                  "$ref": "#/definitions/bbox"
-              },
-              "pageIndex": {
-                  "$ref": "#/definitions/pageIndex"
-              }
-          },
-          "required": ["value", "text", "unit", "bbox", "pageIndex"]
-      }
-  },
-  "type": "object",
-  "properties": {
-      "title": {
-          "$ref": "#/definitions/title"
-      },
-      "technicalSpecifications": {
-          "description": "Technical specifications to extract from the document",
-          "type": "object",
-          "properties": {
-              "PARAMETER_1": {
-                  "label": "参数1的显示名称",
-                  "description": "参数1的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "期望的单位（如 bar, kg, mm 等，如果没有单位则留空字符串 \"\"）",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_2": {
-                  "label": "参数2的显示名称",
-                  "description": "参数2的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_3": {
-                  "label": "参数3的显示名称",
-                  "description": "参数3的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_4": {
-                  "label": "参数4的显示名称",
-                  "description": "参数4的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_5": {
-                  "label": "参数5的显示名称",
-                  "description": "参数5的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_6": {
-                  "label": "参数6的显示名称",
-                  "description": "参数6的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_7": {
-                  "label": "参数7的显示名称",
-                  "description": "参数7的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_8": {
-                  "label": "参数8的显示名称",
-                  "description": "参数8的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_9": {
-                  "label": "参数9的显示名称",
-                  "description": "参数9的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              },
-              "PARAMETER_10": {
-                  "label": "参数10的显示名称",
-                  "description": "参数10的详细描述，说明要提取什么信息，在文档中可能以什么形式出现。",
-                  "desiredUnit": "",
-                  "type": "object",
-                  "properties": {
-                      "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
-                  }
-              }
-          }
-      },
-      "notFoundList": {
-          "description": "List of property names that were not found from the document",
-          "type": "array",
-          "items": {
-              "type": "string"
-          }
-      }
-  },
-  "required": ["title", "technicalSpecifications", "notFoundList"]
-}
-
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "电气设备技术参数数据表",
+    "definitions": {
+        "bbox": {
+            "type": "array",
+            "items": {
+                "type": "number"
+            },
+            "minItems": 4,
+            "maxItems": 4
+        },
+        "pageIndex": {
+            "description": "Index of the page where the attribute is found",
+            "type": "integer"
+        },
+        "title": {
+            "description": "Title of the data sheet, usually the name of the equipment or the model if the name is not available",
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "bbox": {
+                    "$ref": "#/definitions/bbox"
+                },
+                "pageIndex": {
+                    "$ref": "#/definitions/pageIndex"
+                }
+            },
+            "required": ["text", "bbox", "pageIndex"]
+        },
+        "parameter_properties": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "number"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "unit": {
+                    "type": "string"
+                },
+                "bbox": {
+                    "$ref": "#/definitions/bbox"
+                },
+                "pageIndex": {
+                    "$ref": "#/definitions/pageIndex"
+                }
+            },
+            "required": ["value", "text", "unit", "bbox", "pageIndex"]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "title": {
+            "$ref": "#/definitions/title"
+        },
+        "technicalSpecifications": {
+            "description": "从文档中提取的技术参数规格",
+            "type": "object",
+            "properties": {
+                "OVERALL_FRE": {
+                    "label": "整体的额定频率",
+                    "description": "整体技术参数中的额定频率。在文档中出现在主要元件技术参数中的整体技术参数部分。可能的表述方式包括：'额定频率：50Hz'、'频率 50Hz'、'50Hz'、'50赫兹'等。如果单位是'Hz'或'赫兹'，直接提取数值。",
+                    "desiredUnit": "Hz",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "OVERALL_PEAK_CURRENT": {
+                    "label": "整体的额定峰值耐受电流",
+                    "description": "整体技术参数中的额定峰值耐受电流。在文档中可能出现在主要元件技术参数中的整体技术参数部分。可能的表述方式包括：'额定峰值耐受电流：25kA'、'峰值电流 25kA'、'25千安'等。如果单位是'kA'或'千安'，直接提取数值。",
+                    "desiredUnit": "kA",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "INSULATION_LEVEL_GELIDUANKOUJIAN": {
+                    "label": "额定绝缘水平-隔离断口间电压",
+                    "description": "整体技术参数部分中的额定绝缘水平中的额定工频耐受电压-隔离端口间电压值，通常是以kV为单位。",
+                    "desiredUnit": "kV",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "JIEXIANDUANZI_V_RANGE": {
+                    "label": "线圈接线端子的电压在额定值的范围",
+                    "description": "整体技术参数部分中，对于分合闸操作的二次控制线圈、电磁联锁装置，其线圈接线端子的电压在其额定值的范围，通常是表述为百分数形式范围，如10%~20%。",
+                    "desiredUnit": "",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "ISOLATING_PEAK_CURRENT": {
+                    "label": "隔离开关额定峰值耐受电流",
+                    "description": "隔离开关的额定峰值耐受电流。在文档中可能出现在隔离开关技术参数部分。可能的表述方式包括：'隔离开关额定峰值耐受电流：25kA'、'隔离开关峰值电流 25kA'等。如果单位是'kA'或'千安'，直接提取数值；如果是'A'，需要除以1000转换为kA。提取数值部分作为value，单位作为unit。",
+                    "desiredUnit": "kA",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "MAINTENANCE_FRE": {
+                    "label": "检修接地开关额定频率",
+                    "description": "检修接地开关的额定频率。在文档中可能出现在检修接地开关部分,可能的表述方式包括：'检修接地开关额定频率：50Hz'、'接地开关频率 50Hz'等。如果单位是'Hz'或'赫兹'，直接提取数值。提取数值部分作为value，单位作为unit。",
+                    "desiredUnit": "Hz",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "MAINTENANCE_PEAK_CURRENT": {
+                    "label": "检修接地开关额定峰值耐受电流",
+                    "description": "检修接地开关的额定峰值耐受电流。在文档中可能出现在检修接地开关部分。可能的表述方式包括：'检修接地开关额定峰值耐受电流：25kA'、'接地开关峰值电流 25kA'等。",
+                    "desiredUnit": "kA",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "FAST_FRE": {
+                    "label": "快速接地开关额定频率",
+                    "description": "快速接地开关的额定频率。在文档中出现在快速接地开关部分。可能的表述方式包括：'快速接地开关额定频率：50Hz'、'快速接地开关频率 50Hz'等。也有可能在快速接地开关的标题下，写了多个参数，其中就包含了额定频率。",
+                    "desiredUnit": "Hz",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "FAST_PEAK_CURRENT": {
+                    "label": "快速接地开关额定峰值耐受电流",
+                    "description": "快速接地开关的额定峰值耐受电流。在文档中出现在提到快速接地开关部分的后面。可能的表述方式包括：'快速接地开关额定峰值耐受电流：25kA'、'快速接地开关峰值电流 25kA'等。也有可能在快速接地开关的标题下，写了多个参数，其中就包含了额定峰值耐受电流。",
+                    "desiredUnit": "kA",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                }
+            }
+        },
+        "notFoundList": {
+            "description": "List of property names that were not found from the document",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": ["title", "technicalSpecifications", "notFoundList"]
+  }

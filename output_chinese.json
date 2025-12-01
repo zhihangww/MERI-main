@@ -1,0 +1,143 @@
+{
+  "title": {
+    "text": "电气设备技术参数数据表",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "pageIndex": 0
+  },
+  "technicalSpecifications": {
+    "OVERALL_FRE": {
+      "parameter_properties": {
+        "value": 55,
+        "text": "55Hz",
+        "unit": "Hz",
+        "bbox": [
+          113.0348892211914,
+          326.55218505859375,
+          181.56845092773438,
+          339.44598388671875
+        ],
+        "pageIndex": 0
+      }
+    },
+    "OVERALL_PEAK_CURRENT": {
+      "parameter_properties": {
+        "value": 101,
+        "text": "101kA",
+        "unit": "kA",
+        "bbox": [
+          113.02494049072266,
+          509.1356506347656,
+          229.62518310546875,
+          522.424072265625
+        ],
+        "pageIndex": 0
+      }
+    },
+    "INSULATION_LEVEL_GELIDUANKOUJIAN": {
+      "parameter_properties": {
+        "value": 750,
+        "text": "750kV",
+        "unit": "kV",
+        "bbox": [
+          341.07257080078125,
+          604.485107421875,
+          374.6942443847656,
+          614.8489379882812
+        ],
+        "pageIndex": 0
+      }
+    },
+    "JIEXIANDUANZI_V_RANGE": {
+      "parameter_properties": {
+        "value": 85,
+        "text": "85%",
+        "unit": "%",
+        "bbox": [
+          150.29600524902344,
+          159.35577392578125,
+          512.4031982421875,
+          195.03204345703125
+        ],
+        "pageIndex": 1
+      }
+    },
+    "ISOLATING_PEAK_CURRENT": {
+      "parameter_properties": {
+        "value": 0,
+        "text": "未提取",
+        "unit": null,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pageIndex": 0
+      }
+    },
+    "MAINTENANCE_FRE": {
+      "parameter_properties": {
+        "value": 70,
+        "text": "70Hz",
+        "unit": "Hz",
+        "bbox": [
+          133.62954711914062,
+          104.70867919921875,
+          196.7360076904297,
+          116.65057373046875
+        ],
+        "pageIndex": 2
+      }
+    },
+    "MAINTENANCE_PEAK_CURRENT": {
+      "parameter_properties": {
+        "value": 40,
+        "text": "40kA",
+        "unit": "kA",
+        "bbox": [
+          340.7579650878906,
+          137.50946044921875,
+          368.4820251464844,
+          147.3797607421875
+        ],
+        "pageIndex": 2
+      }
+    },
+    "FAST_FRE": {
+      "parameter_properties": {
+        "value": 30,
+        "text": "30Hz",
+        "unit": "Hz",
+        "bbox": [
+          132.9619903564453,
+          448.982177734375,
+          196.64706420898438,
+          460.7809753417969
+        ],
+        "pageIndex": 3
+      }
+    },
+    "FAST_PEAK_CURRENT": {
+      "parameter_properties": {
+        "value": 200,
+        "text": "200kA",
+        "unit": "kA",
+        "bbox": [
+          133.20962524414062,
+          604.95263671875,
+          286.7063293457031,
+          619.1412353515625
+        ],
+        "pageIndex": 3
+      }
+    },
+    "notFoundList": [
+      "ISOLATING_PEAK_CURRENT"
+    ]
+  }
+}

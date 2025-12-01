@@ -105,6 +105,7 @@ def docling_table_converter(item: TableItem, document):
     return TableModel(metadata=TableMetaDataModel(title ="", description=""), cells = cells)
 
 def html_element(tag, className, attrs, content = None):
+    import html as html_module
     attrs_str = ' '.join(f'{key}="{value}"' for key, value in attrs.items())
     
     # for img src must be a property
@@ -114,6 +115,8 @@ def html_element(tag, className, attrs, content = None):
         return f'<{tag} className="{className}" {attrs_str}/>'
 
     else:
+        if content:
+            content=html_module.escape(content)
         return f'<{tag} className="{className}" {attrs_str}>{content}</{tag}>'
 
 

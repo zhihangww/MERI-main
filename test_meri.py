@@ -9,7 +9,7 @@ def main():
     
     # 使用示例数据
     base_path = os.path.dirname(os.path.abspath(__file__))
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'alltext.pdf')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test_eng.pdf')
     schema_path = os.path.join(base_path, 'data', 'demo_data', 'testschema.json')
     
     # 检查文件是否存在
@@ -55,6 +55,12 @@ def main():
         meri.to_intermediate()
         print("中间格式转换完成！")
         print(f"   中间格式长度: {len(meri.int_format)} 字符")
+
+        # 可选：保存中间格式用于调试
+        debug_path = os.path.join(base_path, 'debug_html_eng.html')
+        with open(debug_path, 'w', encoding='utf-8') as f:
+            f.write(meri.int_format)
+        print(f"   中间格式已保存到: {debug_path} (用于调试)")
     except Exception as e:
         print(f"中间格式转换失败: {e}")
         return
