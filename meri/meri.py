@@ -27,8 +27,8 @@ class MERI:
         table_structure_options = TableStructureOptions(mode=TableFormerMode.ACCURATE,
                                                         do_cell_matching=do_cell_matching)
 
-        pipeline_options = PdfPipelineOptions(g=True,
-                                                generate_table_imagenerate_picture_imageses=True,
+        pipeline_options = PdfPipelineOptions(generate_picture_images=True,
+                                                generate_table_images=True,
                                                 do_ocr=do_ocr,
                                                 table_structure_options=table_structure_options)
         backend = PyPdfiumDocumentBackend
