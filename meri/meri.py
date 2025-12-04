@@ -27,8 +27,8 @@ class MERI:
         table_structure_options = TableStructureOptions(mode=TableFormerMode.ACCURATE,
                                                         do_cell_matching=do_cell_matching)
 
-        pipeline_options = PdfPipelineOptions(generate_picture_images=True,
-                                                generate_table_images=True,
+        pipeline_options = PdfPipelineOptions(g=True,
+                                                generate_table_imagenerate_picture_imageses=True,
                                                 do_ocr=do_ocr,
                                                 table_structure_options=table_structure_options)
         backend = PyPdfiumDocumentBackend
@@ -48,7 +48,7 @@ class MERI:
             print("正在进行布局增强（合并分离的键值对）...")
             self.int_format = enhance_html_for_extraction(self.int_format)
             print("布局增强完成")
-
+        
         self.format_handler = HTMLFormatHandler(self.int_format)
 
     def vis_layout(self, **kwargs):

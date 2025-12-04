@@ -14,7 +14,7 @@ def main():
     base_path = os.path.dirname(os.path.abspath(__file__))
     
     # 使用您的中文PDF
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test8.pdf')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test.pdf')
     
     if not os.path.exists(pdf_path):
         # 尝试其他可能的文件名
@@ -36,6 +36,7 @@ def main():
             pdf_path=pdf_path,
             model='gpt-4o-mini',
             model_temp=0.0,
+            do_ocr=False,
             enhance_layout=False  # 禁用布局增强
         )
         meri_original.to_intermediate()
@@ -68,6 +69,7 @@ def main():
             pdf_path=pdf_path,
             model='gpt-4o-mini',
             model_temp=0.0,
+            do_ocr=False,
             enhance_layout=True  # 启用布局增强
         )
         meri_enhanced.to_intermediate()
@@ -106,9 +108,7 @@ def main():
     print("请对比两个HTML文件：")
     print(f"  1. debug_original.html  - 原始布局")
     print(f"  2. debug_enhanced.html  - 增强布局")
-    print()
-    print("查找'额定电压'、'额定频率'等关键词，")
-    print("看看在增强版本中是否与数值合并在一起。")
+
 
 if __name__ == "__main__":
     main()
