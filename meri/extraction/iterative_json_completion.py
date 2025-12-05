@@ -92,10 +92,27 @@ class IterativeJsonPopulator:
                 temp=self.temp,
                 log_token_usage=False
             )
+            
+            if chat_response is None:
+                raise ValueError("API响应为空。这可能是由于API配置问题、网络错误或API密钥问题导致的。")
+            
+            if not hasattr(chat_response, 'choices') or not chat_response.choices or len(chat_response.choices) == 0:
+                raise ValueError("API响应中没有choices。这可能是由于API配置问题、模型响应格式错误或API密钥问题导致的。")
+            
             if chat_response.choices[0].finish_reason == 'length':
                 print('GPT finished generation with finish reason length.')
             
-            tool_calls = chat_response.choices[0].message.tool_calls
+            message = chat_response.choices[0].message
+            if not hasattr(message, 'tool_calls'):
+                error_msg = f"API响应中的message没有tool_calls属性。finish_reason: {chat_response.choices[0].finish_reason}"
+                raise ValueError(error_msg + "。这可能是由于API配置问题、模型响应格式错误或API密钥问题导致的。")
+            
+            tool_calls = message.tool_calls
+            if tool_calls is None or len(tool_calls) == 0:
+                error_msg = f"API响应中没有tool_calls。finish_reason: {chat_response.choices[0].finish_reason}"
+                print(f"警告: {error_msg}")
+                raise ValueError(error_msg + "。这可能是由于API配置问题、模型响应格式错误或API密钥问题导致的。")
+            
             return json.loads(tool_calls[0].function.arguments)
         except Exception as e:
             import traceback

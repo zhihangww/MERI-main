@@ -13,8 +13,8 @@ def main():
 
     # 使用中文 PDF 和自定义 Schema
     base_path = os.path.dirname(os.path.abspath(__file__))
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test4.pdf')
-    schema_path = os.path.join(base_path, 'data', 'demo_data', 'my_custom_schema.json')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test_sim.pdf')
+    schema_path = os.path.join(base_path, 'data', 'demo_data', 'table_text_keyvalue.json')
 
     # 检查文件是否存在
     if not os.path.exists(pdf_path):
@@ -66,7 +66,7 @@ def main():
         print(f"   中间格式长度: {len(meri.int_format)} 字符")
         
         # 可选：保存中间格式用于调试
-        debug_path = os.path.join(base_path, 'debug_intermediate_format.html')
+        debug_path = os.path.join(base_path, 'table_text_keyvalue.html')
         with open(debug_path, 'w', encoding='utf-8') as f:
             f.write(meri.int_format)
         print(f"   中间格式已保存到: {debug_path} (用于调试)")
