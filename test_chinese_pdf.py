@@ -13,7 +13,7 @@ def main():
 
     # 使用中文 PDF 和自定义 Schema
     base_path = os.path.dirname(os.path.abspath(__file__))
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test_sim.pdf')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test_sim-scan.pdf')
     schema_path = os.path.join(base_path, 'data', 'demo_data', 'table_text_keyvalue.json')
 
     # 检查文件是否存在
@@ -44,12 +44,14 @@ def main():
     # 注意：如果是扫描版PDF或文字无法直接提取，请设置 do_ocr=True
     print("\n正在初始化 MERI...")
     print("  已启用布局增强功能（自动合并左右分离的键值对）")
+    print("  已启用OCR功能，默认配置为中文识别（ch_sim, en）")
     try:
         meri = MERI(
             pdf_path=pdf_path,
             model='gpt-4o-mini',
             model_temp=0.0,
-            do_ocr=False,  # 如果PDF是扫描版，改为True
+            do_ocr=True,  # 如果PDF是扫描版，改为True
+            ocr_lang="ch_sim",  # 指定OCR语言：简体中文和英文
             enhance_layout=True  # 启用布局增强（默认值）
         )
         print("MERI 初始化成功")
@@ -106,7 +108,7 @@ def main():
         print(f"未找到的参数: {', '.join(not_found)}")
 
     # 保存结果到文件
-    output_path = os.path.join(base_path, 'output_chinese.json')
+    output_path = os.path.join(base_path, 'output_chinese_scan.json')
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(populated_schema, f, indent=2, ensure_ascii=False)

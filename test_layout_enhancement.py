@@ -14,7 +14,7 @@ def main():
     base_path = os.path.dirname(os.path.abspath(__file__))
     
     # 使用您的中文PDF
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test.pdf')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test_sim-scan.pdf')
     
     if not os.path.exists(pdf_path):
         # 尝试其他可能的文件名
@@ -37,12 +37,13 @@ def main():
             model='gpt-4o-mini',
             model_temp=0.0,
             do_ocr=False,
+            #ocr_lang="ch_sim",
             enhance_layout=False  # 禁用布局增强
         )
         meri_original.to_intermediate()
         
         # 保存原始结果
-        output_path = os.path.join(base_path, 'debug_original.html')
+        output_path = os.path.join(base_path, 'debug_original_scan.html')
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(meri_original.int_format)
         
@@ -70,12 +71,13 @@ def main():
             model='gpt-4o-mini',
             model_temp=0.0,
             do_ocr=False,
+            #ocr_lang="ch_sim",
             enhance_layout=True  # 启用布局增强
         )
         meri_enhanced.to_intermediate()
         
         # 保存增强结果（用于显示的版本，反转义HTML实体）
-        output_path = os.path.join(base_path, 'debug_enhanced.html')
+        output_path = os.path.join(base_path, 'debug_enhanced_scan.html')
         display_html = unescape_html_entities(meri_enhanced.int_format)
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(display_html)

@@ -5,6 +5,12 @@ from docling.datamodel.base_models import InputFormat
 from docling.datamodel.document import *
 from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
 
+# 导入EasyOcrOptions用于配置OCR语言
+try:
+    from docling.datamodel.pipeline_options import EasyOcrOptions
+except ImportError:
+    EasyOcrOptions = None
+
 from .intermediate_format.format_handler import HTMLFormatHandler
 
 from .utils.docling_utils import export_to_html, vis_layout
@@ -14,7 +20,7 @@ from .utils.html_post_processor import enhance_html_for_extraction
 class MERI:
 
     def __init__(self, pdf_path, chunks_max_characters=450000, model='gpt-4o-mini', model_temp=0.0,
-                do_ocr = False, do_cell_matching: bool = True, enhance_layout: bool = True):
+                do_ocr = False, do_cell_matching: bool = True, enhance_layout: bool = True, ocr_lang: list = None):
     
         self.pdf_path = pdf_path
         self.chunks_max_characters = chunks_max_characters
@@ -27,10 +33,31 @@ class MERI:
         table_structure_options = TableStructureOptions(mode=TableFormerMode.ACCURATE,
                                                         do_cell_matching=do_cell_matching)
 
-        pipeline_options = PdfPipelineOptions(generate_picture_images=True,
-                                                generate_table_images=True,
-                                                do_ocr=do_ocr,
-                                                table_structure_options=table_structure_options)
+        # 配置OCR选项
+        ocr_options = None
+        if do_ocr and EasyOcrOptions is not None:
+            # 设置默认语言为简体中文和英文
+            if ocr_lang is None:
+                ocr_lang = ["ch_sim", "en"]
+            # 确保ocr_lang是列表格式
+            if isinstance(ocr_lang, str):
+                ocr_lang = [ocr_lang]
+            # 创建EasyOcrOptions实例（自带kind='easyocr'字段）
+            ocr_options = EasyOcrOptions(lang=ocr_lang)
+            print(f"已配置OCR语言: {ocr_lang}")
+
+        # 创建pipeline_options
+        if ocr_options is not None:
+            pipeline_options = PdfPipelineOptions(generate_picture_images=True,
+                                                    generate_table_images=True,
+                                                    do_ocr=do_ocr,
+                                                    ocr_options=ocr_options,
+                                                    table_structure_options=table_structure_options)
+        else:
+            pipeline_options = PdfPipelineOptions(generate_picture_images=True,
+                                                    generate_table_images=True,
+                                                    do_ocr=do_ocr,
+                                                    table_structure_options=table_structure_options)
         backend = PyPdfiumDocumentBackend
         self.converter = DocumentConverter(
             format_options={
