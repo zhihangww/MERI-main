@@ -142,6 +142,15 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },
+                "快速接地开关额定电流": {
+                    "label": "快速接地开关额定电流",
+                    "description": "快速接地开关的额定电流。在文档中可能出现在快速接地开关部分。可能的表述方式包括：'快速接地开关额定电流：2500A'、'快速接地开关额定电流 2500A'等。",
+                    "desiredUnit": "A",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
                 "隔离开关额定短路持续时间": {
                     "label": "隔离开关额定短路持续时间",
                     "description": "隔离开关的额定短路持续时间。。在文档中出现在提到隔离开关部分的后面。可能的表述方式包括：'隔离开关额定短路持续时间：1s'、'隔离开关额定短路持续时间 1s'等。也有可能在隔离开关的标题下，写了多个参数，其中就包含了额定短路持续时间。",

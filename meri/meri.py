@@ -20,12 +20,14 @@ from .utils.html_post_processor import enhance_html_for_extraction
 class MERI:
 
     def __init__(self, pdf_path, chunks_max_characters=450000, model='gpt-4o-mini', model_temp=0.0,
-                do_ocr = False, do_cell_matching: bool = True, enhance_layout: bool = True, ocr_lang: list = None):
+                do_ocr = False, do_cell_matching: bool = True, enhance_layout: bool = True, ocr_lang: list = None,
+                n_rounds: int = 2):
     
         self.pdf_path = pdf_path
         self.chunks_max_characters = chunks_max_characters
         self.model = model
         self.model_temp = model_temp
+        self.n_rounds = n_rounds  # 提取轮次，增加轮次可提高稳定性
         self.enhance_layout = enhance_layout  # 是否启用布局增强（合并键值对）
 
         self.format_handler = None
@@ -89,6 +91,7 @@ class MERI:
         self.jsonExtractor = JsonExtractor(intermediate_format=self.format_handler,
                                             chunks_max_characters=self.chunks_max_characters, 
                                             model=self.model, 
-                                            model_temp=self.model_temp)
+                                            model_temp=self.model_temp,
+                                            n_rounds=self.n_rounds)
                 
         return self.jsonExtractor.populate_schema(json_schema_string=json_schema_str)

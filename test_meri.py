@@ -9,8 +9,8 @@ def main():
     
     # 使用示例数据
     base_path = os.path.dirname(os.path.abspath(__file__))
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test_eng.pdf')
-    schema_path = os.path.join(base_path, 'data', 'demo_data', 'testschema.json')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test.pdf')
+    schema_path = os.path.join(base_path, 'data', 'demo_data', 'table_text_keyvalue.json')
     
     # 检查文件是否存在
     if not os.path.exists(pdf_path):
@@ -40,10 +40,11 @@ def main():
     try:
         meri = MERI(
             pdf_path=pdf_path,
-            model='gpt-4o-mini',  # 可以改为 'azure/gpt-4o' 如果使用 Azure
-            model_temp=0.0
+            model='qwen/qwen3-max',  # 使用阿里云通义千问 qwen-max
+            model_temp=0.0,
+            n_rounds=2  # 提取轮次，增加可提高稳定性（默认2轮）
         )
-        print("MERI 初始化成功")
+        print("MERI 初始化成功（使用通义千问 qwen-max，2轮提取）")
     except Exception as e:
         print(f"MERI 初始化失败: {e}")
         print("提示：请确保已安装所有依赖 (poetry install)")
@@ -82,13 +83,13 @@ def main():
     except Exception as e:
         print(f"参数提取失败: {e}")
         print(" 提示：")
-        print("   1. 检查 .env 文件中的 API 密钥是否正确")
+        print("   1. 检查 .env 文件中的 DASHSCOPE_API_KEY 是否正确")
         print("   2. 确保有足够的 API 额度")
         print("   3. 检查网络连接")
         return
     
     # 保存结果到文件
-    output_path = os.path.join(base_path, 'test_output_result.json')
+    output_path = os.path.join(base_path, 'output_qwen.json')
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(populated_schema, f, indent=2, ensure_ascii=False)

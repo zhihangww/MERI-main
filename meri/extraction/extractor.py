@@ -4,6 +4,7 @@ from .iterative_json_completion import (
 )
 
 from meri.intermediate_format.format_handler import BasicFormatHandler
+import json
 
 def create_openai_tools_arr(func_name, func_desc, output_schema):
 
@@ -17,6 +18,37 @@ def create_openai_tools_arr(func_name, func_desc, output_schema):
             }
     }]
     return tools
+
+
+def check_not_found_params(results: dict, schema: dict) -> dict:
+    """
+    后处理：检查未提取到的参数，添加到 notFoundList
+    """
+    # 确保 notFoundList 存在
+    if 'notFoundList' not in results:
+        results['notFoundList'] = []
+    
+    # 获取 schema 中定义的参数
+    tech_specs_schema = schema.get('properties', {}).get('technicalSpecifications', {}).get('properties', {})
+    if not tech_specs_schema:
+        return results
+    
+    # 获取实际提取的参数
+    tech_specs_result = results.get('technicalSpecifications', {})
+    
+    # 检查每个参数
+    for param_name in tech_specs_schema.keys():
+        param_data = tech_specs_result.get(param_name, {})
+        param_props = param_data.get('parameter_properties', {}) if param_data else {}
+        value = param_props.get('value') if param_props else None
+        
+        # 如果没有有效值且不在 notFoundList 中
+        has_valid_value = value is not None and value != ""
+        if not has_valid_value and param_name not in results['notFoundList']:
+            results['notFoundList'].append(param_name)
+    
+    return results
+
 
 class JsonExtractor:
 
@@ -43,5 +75,9 @@ class JsonExtractor:
         populator = IterativeJsonPopulator(json_schema_string, IterativePopulationStrategies.SELFSUPERVISED.value, n_rounds=self.n_rounds, model = self.model,
                                            temp=self.temp)
         results = populator.complete(content_chunks)
+        
+        # 后处理：确保未找到的参数在 notFoundList 中
+        schema = json.loads(json_schema_string)
+        results = check_not_found_params(results, schema)
 
         return results
