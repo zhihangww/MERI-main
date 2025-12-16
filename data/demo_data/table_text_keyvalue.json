@@ -61,7 +61,7 @@
             "description": "从文档中提取的技术参数规格",
             "type": "object",
             "properties": {
-                "OVERALL_FRE": {
+                "整体额定频率": {
                     "label": "整体的额定频率",
                     "description": "整体技术参数中的额定频率。在文档中出现在主要元件技术参数中的整体技术参数部分。可能的表述方式包括：'额定频率：50Hz'、'频率 50Hz'、'50Hz'、'50赫兹'等。如果单位是'Hz'或'赫兹'，直接提取数值。",
                     "desiredUnit": "Hz",
@@ -70,7 +70,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },
-                "OVERALL_PEAK_CURRENT": {
+                "整体额定峰值耐受电流": {
                     "label": "整体的额定峰值耐受电流",
                     "description": "整体技术参数中的额定峰值耐受电流。在文档中可能出现在主要元件技术参数中的整体技术参数部分。可能的表述方式包括：'额定峰值耐受电流：25kA'、'峰值电流 25kA'、'25千安'等。如果单位是'kA'或'千安'，直接提取数值。",
                     "desiredUnit": "kA",
@@ -79,7 +79,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },
-                "INSULATION_LEVEL_GELIDUANKOUJIAN": {
+                "整体隔离断口间电压": {
                     "label": "整体的额定绝缘水平-隔离断口间电压",
                     "description": "整体技术参数部分中的额定绝缘水平中的额定工频耐受电压-隔离端口间电压值，通常是以kV为单位。",
                     "desiredUnit": "kV",
@@ -88,7 +88,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },
-                "AVERAGE_TEMPERATURE": {
+                "工程厂区多年平均气温": {
                     "label": "工程厂区多年平均气温",
                     "description": "在工厂区的自然气象条件中，表述为平均气温或者多年平均气温，单位为摄氏度。",
                     "desiredUnit": "°C",
@@ -97,7 +97,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },
-                "AVERAGE_WATER": {
+                "工程厂区多年平均降水量": {
                     "label": "工程厂区多年平均降水量",
                     "description": "在工厂区的自然气象条件中，表述为平均降水量或者多年平均降水量，单位为mm，也可能在表格中在降水量后写出数值，比如1000mm，也可能单位和数值在同一行的不同列单元格。",
                     "desiredUnit": "mm",
@@ -106,7 +106,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 }, 
-                "MAX_TEMPERATURE": {
+                "工程厂区多年最高气温": {
                     "label": "工程厂区多年最高气温",
                     "description": "在工厂区的自然气象条件中，表述为为最高气温或者多年最高气温或者极端最高气温，单位为摄氏度，也可能在表格中在最高气温后写出数值，比如40°C，也可能单位和数值在同一行的不同列单元格。",
                     "desiredUnit": "°C",
@@ -115,7 +115,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },                               
-                "MAINTENANCE_FRE": {
+                "断路器额定频率": {
                     "label": "断路器额定频率",
                     "description": "断路器的额定频率。在文档中可能出现在断路器部分,可能的表述方式包括：'断路器额定频率：50Hz'、'断路器频率 50Hz'等。如果单位是'Hz'或'赫兹'，直接提取数值。提取数值部分作为value，单位作为unit。",
                     "desiredUnit": "Hz",
@@ -124,7 +124,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },
-                "MAINTENANCE_PEAK_CURRENT": {
+                "断路器额定电流": {
                     "label": "断路器额定电流",
                     "description": "断路器的额定电流。在文档中可能出现在断路器部分。可能的表述方式包括：'断路器额定电流：2500A'、'断路器额定电流 2500A'等。",
                     "desiredUnit": "A",
@@ -133,7 +133,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },
-                "FAST_FRE": {
+                "断路器合闸时间": {
                     "label": "断路器合闸时间",
                     "description": "断路器的合闸时间。在文档中出现在断路器部分。可能的表述方式包括：'断路器合闸时间：<50ms'等。也有可能在断路器的标题下，写了多个参数，其中就包含了合闸时间。",
                     "desiredUnit": "ms",
@@ -142,7 +142,7 @@
                         "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
                     }
                 },
-                "FAST_PEAK_CURRENT": {
+                "隔离开关额定短路持续时间": {
                     "label": "隔离开关额定短路持续时间",
                     "description": "隔离开关的额定短路持续时间。。在文档中出现在提到隔离开关部分的后面。可能的表述方式包括：'隔离开关额定短路持续时间：1s'、'隔离开关额定短路持续时间 1s'等。也有可能在隔离开关的标题下，写了多个参数，其中就包含了额定短路持续时间。",
                     "desiredUnit": "s",

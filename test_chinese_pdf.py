@@ -13,7 +13,7 @@ def main():
 
     # 使用中文 PDF 和自定义 Schema
     base_path = os.path.dirname(os.path.abspath(__file__))
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test_sim-scan.pdf')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test_sim.pdf')
     schema_path = os.path.join(base_path, 'data', 'demo_data', 'table_text_keyvalue.json')
 
     # 检查文件是否存在
@@ -50,8 +50,8 @@ def main():
             pdf_path=pdf_path,
             model='gpt-4o-mini',
             model_temp=0.0,
-            do_ocr=True,  # 如果PDF是扫描版，改为True
-            ocr_lang="ch_sim",  # 指定OCR语言：简体中文和英文
+            do_ocr=False,  # 如果PDF是扫描版，改为True
+            #ocr_lang="ch_sim",  # 指定OCR语言：简体中文和英文
             enhance_layout=True  # 启用布局增强（默认值）
         )
         print("MERI 初始化成功")
@@ -97,9 +97,15 @@ def main():
         print(f"文档标题: {populated_schema.get('title', {}).get('text', '未提取到')}")
     
     tech_specs = populated_schema.get('technicalSpecifications', {})
-    found_count = sum(1 for key, val in tech_specs.items() 
-                     if isinstance(val, dict) and 'parameter_properties' in val 
-                     and val['parameter_properties'].get('value') is not None)
+    found_count = 0
+    for key, val in tech_specs.items():
+        if isinstance(val, dict) and 'parameter_properties' in val:
+            param_props = val.get('parameter_properties')
+            # 处理 parameter_properties 可能是 None 或 dict 的情况
+            if param_props is not None and isinstance(param_props, dict):
+                if param_props.get('value') is not None:
+                    found_count += 1
+    
     total_count = len(schema.get('properties', {}).get('technicalSpecifications', {}).get('properties', {}))
     print(f"提取到的参数: {found_count}/{total_count}")
     
@@ -108,7 +114,7 @@ def main():
         print(f"未找到的参数: {', '.join(not_found)}")
 
     # 保存结果到文件
-    output_path = os.path.join(base_path, 'output_chinese_scan.json')
+    output_path = os.path.join(base_path, 'output.json')
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(populated_schema, f, indent=2, ensure_ascii=False)
