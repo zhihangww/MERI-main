@@ -1,0 +1,273 @@
+{
+  "source_file": "data/demo_data/final.pdf",
+  "extraction_time": "2026-01-22T14:27:27.973262",
+  "model": "qwen/qwen3-max",
+  "params_list_file": "params_list.txt",
+  "statistics": {
+    "params_requested": 47,
+    "params_found": 42,
+    "params_not_found": 5,
+    "total_records": 42
+  },
+  "parameters": [
+    {
+      "name": "断路器断口数",
+      "value": "1",
+      "unit": "",
+      "original_text": "每相断口数： 1"
+    },
+    {
+      "name": "断路器重合闸无电流间隙时间",
+      "value": "0.3及以上，可调",
+      "unit": "s",
+      "original_text": "f. 重合闸无电流间隔时间（分合时间） 0.3s及以上，可调"
+    },
+    {
+      "name": "断路器额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "original_text": "a. 额定电压\n72.5kV"
+    },
+    {
+      "name": "断路器额定电流",
+      "value": "4000/3150",
+      "unit": "A",
+      "original_text": "c . 额定电流\n4000A/3150A"
+    },
+    {
+      "name": "断路器额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "original_text": "b. 额定频率\n50Hz"
+    },
+    {
+      "name": "断路器时间参数-开断时间",
+      "value": "≤50",
+      "unit": "ms",
+      "original_text": "b. 开断时间\n50ms"
+    },
+    {
+      "name": "断路器时间参数-分闸时间",
+      "value": "≤30",
+      "unit": "ms",
+      "original_text": "c. 分闸时间\n30ms"
+    },
+    {
+      "name": "断路器时间参数-合闸时间",
+      "value": "≤100",
+      "unit": "ms",
+      "original_text": "d. 合闸时间\n100ms"
+    },
+    {
+      "name": "断路器时间参数-合分时间（金属短接时间）",
+      "value": "≤60",
+      "unit": "ms",
+      "original_text": "e. 合分时间（金属短接时间） 60ms"
+    },
+    {
+      "name": "断路器时间参数-分闸不同期性",
+      "value": "≤3",
+      "unit": "ms",
+      "original_text": "分闸不同期性\n3ms"
+    },
+    {
+      "name": "断路器时间参数-合闸不同期性",
+      "value": "≤5",
+      "unit": "ms",
+      "original_text": "合闸不同期性\n5ms"
+    },
+    {
+      "name": "断路器额定短路开断电流交流分量",
+      "value": "40",
+      "unit": "kA",
+      "original_text": "a. 交流分量（有效值）40kA"
+    },
+    {
+      "name": "断路器额定短路开断电流直流分量",
+      "value": "≥50",
+      "unit": "%",
+      "original_text": "b. 直流分量（百分数，对应于分闸时间30ms） ≥50"
+    },
+    {
+      "name": "断路器TRV特性参数-开断电流水平60%时的振幅系数",
+      "value": "1.5",
+      "unit": "",
+      "original_text": "60\n1.3\n1.5\n1.85"
+    },
+    {
+      "name": "断路器空载变压器开断能力",
+      "value": "350",
+      "unit": "MVA",
+      "original_text": "(5) 空载变压器开断能力\n350MVA"
+    },
+    {
+      "name": "断路器暂态恢复电压值",
+      "value": "0.55",
+      "unit": "kV/μs",
+      "original_text": "暂态恢复电压值：0.55kV/μs"
+    },
+    {
+      "name": "断路器额定短路关合电流",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "(8) 额定短路关合电流\n100kA（峰值）"
+    },
+    {
+      "name": "断路器操作噪声水平",
+      "value": "85",
+      "unit": "dB",
+      "original_text": "断路器操作时噪声水平不应超过85dB。"
+    },
+    {
+      "name": "隔离开关额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "original_text": "a. 额定电压 72.5kV"
+    },
+    {
+      "name": "隔离开关额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "original_text": "b. 额定频率 50Hz"
+    },
+    {
+      "name": "隔离开关额定电流",
+      "value": "4000/1250",
+      "unit": "A",
+      "original_text": "c. 额定电流 4000A/1250A"
+    },
+    {
+      "name": "隔离开关额定短时耐受电流有效值",
+      "value": "40",
+      "unit": "kA",
+      "original_text": "d . 额定短时耐受电流（有效值） 40kA"
+    },
+    {
+      "name": "隔离开关额定短路持续时间",
+      "value": "3",
+      "unit": "s",
+      "original_text": "e . 额定短路持续时间 3s"
+    },
+    {
+      "name": "隔离开关额定峰值耐受电流峰值",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "f. 额定峰值耐受电流（峰值） 100kA"
+    },
+    {
+      "name": "隔离开关分合电容电流",
+      "value": "1",
+      "unit": "A",
+      "original_text": "g . 分、合电容电流（有效值） 1A"
+    },
+    {
+      "name": "隔离开关分合电感电流",
+      "value": "0.5",
+      "unit": "A",
+      "original_text": "h . 分、合电感电流（有效值） 0.5A"
+    },
+    {
+      "name": "隔离开关主回路电阻",
+      "value": "<40",
+      "unit": "μΩ",
+      "original_text": "i . 开关主回路电阻 < 40μΩ"
+    },
+    {
+      "name": "检修接地开关额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "original_text": "a . 额定电压 72.5kV"
+    },
+    {
+      "name": "检修接地开关额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "original_text": "b . 额定频率 50Hz"
+    },
+    {
+      "name": "检修接地开关额定峰值耐受电流峰值",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "e. 额定峰值耐受电流（峰值） 100kA"
+    },
+    {
+      "name": "检修接地开关主回路接触电阻",
+      "value": "<1000",
+      "unit": "μΩ",
+      "original_text": "g. 接地开关主回路接触电阻 < 1000μΩ"
+    },
+    {
+      "name": "快速接地开关额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "original_text": "b. 额定频率 50Hz"
+    },
+    {
+      "name": "快速接地开关额定短时耐受电流有效值",
+      "value": "40",
+      "unit": "kA",
+      "original_text": "c. 额定短时耐受电流（有效值） 40kA"
+    },
+    {
+      "name": "快速接地开关关合短路电流能力",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "h. 关合短路电流的能力 100kA"
+    },
+    {
+      "name": "快速接地开关主回路接触电阻",
+      "value": "<100",
+      "unit": "μΩ",
+      "original_text": "k. 接地开关主回路接触电阻 < 100μΩ"
+    },
+    {
+      "name": "电流互感器一次绕组绝缘材料",
+      "value": "SF6气体",
+      "unit": "",
+      "original_text": "-次绕组\nSF6气体"
+    },
+    {
+      "name": "电压互感器二次绕组绝缘材料",
+      "value": "环氧树脂",
+      "unit": "",
+      "original_text": "二次绕组\n环氧树脂"
+    },
+    {
+      "name": "金属氧化物避雷器标称放电电流",
+      "value": "10",
+      "unit": "kA",
+      "original_text": "e. 标称放电电流\n10kA"
+    },
+    {
+      "name": "金属氧化物避雷器额定电压",
+      "value": "90",
+      "unit": "kV",
+      "original_text": "c. 避雷器额定电压\n90kV"
+    },
+    {
+      "name": "六氟化硫气体标准湿度",
+      "value": "8",
+      "unit": "μg/g",
+      "original_text": "湿度（H 2 O）≤8μg/g"
+    },
+    {
+      "name": "六氟化硫气体标准酸度",
+      "value": "0.3",
+      "unit": "μg/g",
+      "original_text": "酸度（以 HF 计）≤0.3μg/g"
+    },
+    {
+      "name": "六氟化硫气体湿度-在无电弧分解物的隔室运行时的湿度",
+      "value": "500",
+      "unit": "μL/L",
+      "original_text": "无电弧分解物的隔室...运行值 ≤500"
+    }
+  ],
+  "not_found": [
+    "断路器主回路电阻",
+    "断路器额定峰值耐受电流",
+    "断路器六氟化硫气体压力额定值",
+    "断路器六氟化硫气体压力报警值",
+    "断路器六氟化硫气体质量"
+  ]
+}

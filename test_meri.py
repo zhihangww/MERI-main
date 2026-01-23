@@ -9,8 +9,8 @@ def main():
     
     # 使用示例数据
     base_path = os.path.dirname(os.path.abspath(__file__))
-    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'user_test.pdf')
-    schema_path = os.path.join(base_path, 'data', 'demo_data', 'table_text_keyvalue.json')
+    pdf_path = os.path.join(base_path, 'data', 'demo_data', 'final.pdf')
+    schema_path = os.path.join(base_path, 'data', 'demo_data', 'all_data.json')
     
     # 检查文件是否存在
     if not os.path.exists(pdf_path):

@@ -61,6 +61,24 @@
             "description": "从文档中提取的技术参数规格",
             "type": "object",
             "properties": {
+                "整体额定电压": {
+                    "label": "整体的额定电压",
+                    "description": "整体技术参数中的额定电压。在文档中出现在主要元件技术参数中的整体技术参数部分。可能的表述方式包括：'额定电压：10kV'、'电压 10kV'、'10千伏'等。如果单位是'kV'或'千伏'，直接提取数值。",
+                    "desiredUnit": "kV",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
+                "整体最高运行电压": {
+                    "label": "整体的最高运行电压",
+                    "description": "整体技术参数中的最高运行电压。在文档中出现在主要元件技术参数中的整体技术参数部分。可能的表述方式包括：'最高运行电压：10kV'、'运行电压 10kV'、'10千伏'等。如果单位是'kV'或'千伏'，直接提取数值。",
+                    "desiredUnit": "kV",
+                    "type": "object",
+                    "properties": {
+                        "parameter_properties": {"$ref": "#/definitions/parameter_properties"}
+                    }
+                },
                 "整体额定频率": {
                     "label": "整体的额定频率",
                     "description": "整体技术参数中的额定频率。在文档中出现在主要元件技术参数中的整体技术参数部分。可能的表述方式包括：'额定频率：50Hz'、'频率 50Hz'、'50Hz'、'50赫兹'等。如果单位是'Hz'或'赫兹'，直接提取数值。",

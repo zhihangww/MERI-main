@@ -1,0 +1,971 @@
+{
+  "document_title": "SF6 气体水分允许含量（20℃时，μL/L）",
+  "parameters": [
+    {
+      "device": "整体技术参数",
+      "name": "额定电压",
+      "value": "145",
+      "unit": "kV",
+      "context": "(1) 额定电压: 145kV/170kV"
+    },
+    {
+      "device": "整体技术参数",
+      "name": "额定电压",
+      "value": "170",
+      "unit": "kV",
+      "context": "(1) 额定电压: 145kV/170kV"
+    },
+    {
+      "device": "整体技术参数",
+      "name": "额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "context": "(3) 额定频率: 50Hz"
+    },
+    {
+      "device": "整体技术参数",
+      "name": "额定电流",
+      "value": "4000",
+      "unit": "A",
+      "context": "(4) 额定电流: 4000A（主变间隔、分段间隔）; 3150A（海缆间隔、站用变间隔）"
+    },
+    {
+      "device": "整体技术参数",
+      "name": "额定电流",
+      "value": "3150",
+      "unit": "A",
+      "context": "(4) 额定电流: 4000A（主变间隔、分段间隔）; 3150A（海缆间隔、站用变间隔）"
+    },
+    {
+      "device": "整体技术参数",
+      "name": "额定短时耐受电流",
+      "value": "40",
+      "unit": "kA",
+      "context": "(5) 额定短时耐受电流: 40kA（有效值）"
+    },
+    {
+      "device": "整体技术参数",
+      "name": "额定短路持续时间",
+      "value": "3",
+      "unit": "s",
+      "context": "(6) 额定短路持续时间: 3s"
+    },
+    {
+      "device": "整体技术参数",
+      "name": "额定峰值耐受电流",
+      "value": "100",
+      "unit": "kA",
+      "context": "(7) 额定峰值耐受电流: 100kA"
+    },
+    {
+      "device": "额定绝缘水平",
+      "name": "额定雷电冲击耐受电压",
+      "value": "750",
+      "unit": "kV",
+      "context": "断口间及极间 750kV"
+    },
+    {
+      "device": "额定绝缘水平",
+      "name": "额定工频耐受电压",
+      "value": "315",
+      "unit": "kV",
+      "context": "断口间及极间 315kV"
+    },
+    {
+      "device": "温升",
+      "name": "温升",
+      "value": "30",
+      "unit": "K",
+      "context": "在环境温度45℃时，对运行人员易接触的外壳，其温升不应超过30K"
+    },
+    {
+      "device": "温升",
+      "name": "温升",
+      "value": "40",
+      "unit": "K",
+      "context": "对运行人员易接近，但正常操作时不需要接触的外壳，其温升不应超过40K"
+    },
+    {
+      "device": "温升",
+      "name": "温升",
+      "value": "65",
+      "unit": "K",
+      "context": "对运行人员不接触的外壳，其温升不应超过65K"
+    },
+    {
+      "device": "局部放电",
+      "name": "局部放电量",
+      "value": "3",
+      "unit": "pC",
+      "context": "GIS单个绝缘元件的局部放电量应不大于3pC"
+    },
+    {
+      "device": "局部放电",
+      "name": "局部放电量",
+      "value": "10",
+      "unit": "pC",
+      "context": "组装后整体的局部放电量应不大于10pC"
+    },
+    {
+      "device": "SF6气体",
+      "name": "SF6气体漏气率",
+      "value": "0.5",
+      "unit": "%",
+      "context": "(11) SF6气体漏气率：不大于0.5%/年"
+    },
+    {
+      "device": "断路器",
+      "name": "额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "context": "a. 额定电压: 72.5kV"
+    },
+    {
+      "device": "断路器",
+      "name": "额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "context": "b. 额定频率: 50Hz"
+    },
+    {
+      "device": "断路器",
+      "name": "额定电流",
+      "value": "4000",
+      "unit": "A",
+      "context": "c . 额定电流: 4000A/3150A"
+    },
+    {
+      "device": "断路器",
+      "name": "额定电流",
+      "value": "3150",
+      "unit": "A",
+      "context": "c . 额定电流: 4000A/3150A"
+    },
+    {
+      "device": "断路器",
+      "name": "开断时间",
+      "value": "50",
+      "unit": "ms",
+      "context": "b. 开断时间: 50ms"
+    },
+    {
+      "device": "断路器",
+      "name": "分闸时间",
+      "value": "30",
+      "unit": "ms",
+      "context": "c. 分闸时间: 30ms"
+    },
+    {
+      "device": "断路器",
+      "name": "合闸时间",
+      "value": "100",
+      "unit": "ms",
+      "context": "d. 合闸时间: 100ms"
+    },
+    {
+      "device": "断路器",
+      "name": "合分时间",
+      "value": "60",
+      "unit": "ms",
+      "context": "e. 合分时间（金属短接时间） 60ms"
+    },
+    {
+      "device": "断路器",
+      "name": "分闸不同期性",
+      "value": "3",
+      "unit": "ms",
+      "context": "分闸不同期性 3ms"
+    },
+    {
+      "device": "断路器",
+      "name": "合闸不同期性",
+      "value": "5",
+      "unit": "ms",
+      "context": "合闸不同期性 5ms"
+    },
+    {
+      "device": "断路器",
+      "name": "重合闸无电流间隔时间",
+      "value": "0.3",
+      "unit": "s",
+      "context": "f. 重合闸无电流间隔时间（分合时间） 0.3s及以上，可调"
+    },
+    {
+      "device": "断路器",
+      "name": "交流分量",
+      "value": "40",
+      "unit": "kA",
+      "context": "a. 交流分量（有效值）40kA"
+    },
+    {
+      "device": "断路器",
+      "name": "直流分量",
+      "value": "50",
+      "unit": "%",
+      "context": "b. 直流分量（百分数，对应于分闸时间30ms） ≥50"
+    },
+    {
+      "device": "断路器",
+      "name": "开断电流水平",
+      "value": "100",
+      "unit": "%",
+      "context": "开断电流水平（%） 100"
+    },
+    {
+      "device": "断路器",
+      "name": "首相开断系数",
+      "value": "1.3",
+      "unit": "",
+      "context": "首相开断系数 1.3"
+    },
+    {
+      "device": "断路器",
+      "name": "振幅系数",
+      "value": "1.4",
+      "unit": "",
+      "context": "振幅系数 1.4"
+    },
+    {
+      "device": "断路器",
+      "name": "恢复电压上升速度",
+      "value": "0.75",
+      "unit": "kV/μs",
+      "context": "恢复电压上升速度 kV/μs 0.75"
+    },
+    {
+      "device": "断路器",
+      "name": "开断电流水平",
+      "value": "60",
+      "unit": "%",
+      "context": "开断电流水平（%） 60"
+    },
+    {
+      "device": "断路器",
+      "name": "振幅系数",
+      "value": "1.5",
+      "unit": "",
+      "context": "振幅系数 1.5"
+    },
+    {
+      "device": "断路器",
+      "name": "恢复电压上升速度",
+      "value": "1.85",
+      "unit": "kV/μs",
+      "context": "恢复电压上升速度 kV/μs 1.85"
+    },
+    {
+      "device": "断路器",
+      "name": "开断电流水平",
+      "value": "30",
+      "unit": "%",
+      "context": "开断电流水平（%） 30"
+    },
+    {
+      "device": "断路器",
+      "name": "首相开断系数",
+      "value": "1.5",
+      "unit": "",
+      "context": "首相开断系数 1.5"
+    },
+    {
+      "device": "断路器",
+      "name": "恢复电压上升速度",
+      "value": "3.7",
+      "unit": "kV/μs",
+      "context": "恢复电压上升速度 kV/μs 3.7"
+    },
+    {
+      "device": "断路器",
+      "name": "开断电流水平",
+      "value": "10",
+      "unit": "%",
+      "context": "开断电流水平（%） 10"
+    },
+    {
+      "device": "断路器",
+      "name": "振幅系数",
+      "value": "1.7",
+      "unit": "",
+      "context": "振幅系数 1.7"
+    },
+    {
+      "device": "断路器",
+      "name": "最大电缆充电电流",
+      "value": "125",
+      "unit": "A",
+      "context": "在额定电压下应能开断的最大电缆充电电流不低于125A"
+    },
+    {
+      "device": "断路器",
+      "name": "线路充电开断电流能力",
+      "value": "125",
+      "unit": "A",
+      "context": "在额定电压下应能开断的最大电缆充电电流不低于125A"
+    },
+    {
+      "device": "断路器",
+      "name": "空载变压器开断能力",
+      "value": "350",
+      "unit": "MVA",
+      "context": "(5) 空载变压器开断能力: 350MVA"
+    },
+    {
+      "device": "断路器",
+      "name": "L90",
+      "value": "36",
+      "unit": "kA",
+      "context": "L90 、 36kA"
+    },
+    {
+      "device": "断路器",
+      "name": "L75",
+      "value": "30",
+      "unit": "kA",
+      "context": "L75 、 30kA"
+    },
+    {
+      "device": "断路器",
+      "name": "L60",
+      "value": "24",
+      "unit": "kA",
+      "context": "L60 、 24kA"
+    },
+    {
+      "device": "断路器",
+      "name": "近距故障开断能力",
+      "value": "40",
+      "unit": "kA",
+      "context": "a. 交流分量（有效值）40kA"
+    },
+    {
+      "device": "断路器",
+      "name": "失步开断能力",
+      "value": "10",
+      "unit": "kA",
+      "context": "(7) 失步开断能力 10kA"
+    },
+    {
+      "device": "断路器",
+      "name": "额定失步开断电流",
+      "value": "25",
+      "unit": "%",
+      "context": "额定失步开断电流：25%额定开断电流"
+    },
+    {
+      "device": "断路器",
+      "name": "工频恢复电压",
+      "value": "2.5",
+      "unit": "倍额定相电压",
+      "context": "工频恢复电压：2.5倍额定相电压"
+    },
+    {
+      "device": "断路器",
+      "name": "暂态恢复电压值",
+      "value": "0.55",
+      "unit": "kV/μs",
+      "context": "暂态恢复电压值：0.55kV/μs"
+    },
+    {
+      "device": "断路器",
+      "name": "额定短路关合电流",
+      "value": "100",
+      "unit": "kA",
+      "context": "(8) 额定短路关合电流: 100kA（峰值）"
+    },
+    {
+      "device": "断路器",
+      "name": "开断额定短路电流次数",
+      "value": "15",
+      "unit": "次",
+      "context": "不须更换零部件、不检修，允许开断额定短路电流的次数15次"
+    },
+    {
+      "device": "断路器",
+      "name": "开断额定电流次数",
+      "value": ">5000",
+      "unit": "次",
+      "context": "不须更换零部件、不检修，允许开断额定电流的次数&gt;5000次"
+    },
+    {
+      "device": "断路器",
+      "name": "机械稳定性操作次数",
+      "value": "10000",
+      "unit": "次",
+      "context": "在不检修、不调整、不更换零部件，三相机械稳定性操作次数不少于10000次"
+    },
+    {
+      "device": "断路器",
+      "name": "噪声水平",
+      "value": "85",
+      "unit": "dB",
+      "context": "断路器操作时噪声水平不应超过85dB"
+    },
+    {
+      "device": "断路器",
+      "name": "每相断口数",
+      "value": "1",
+      "unit": "",
+      "context": "每相断口数： 1"
+    },
+    {
+      "device": "断路器",
+      "name": "操作电压",
+      "value": "220",
+      "unit": "V",
+      "context": "操作电压为 DC220V"
+    },
+    {
+      "device": "断路器",
+      "name": "合闸电压范围",
+      "value": "80%~110%",
+      "unit": "%",
+      "context": "当操作电压在80%~110%Un范围内变化时，应保证断路器可靠地合闸"
+    },
+    {
+      "device": "断路器",
+      "name": "分闸电压范围",
+      "value": "65%~110%",
+      "unit": "%",
+      "context": "在65%~110%Un范围内变化时应保证断路器可靠地分闸"
+    },
+    {
+      "device": "断路器",
+      "name": "不动作电压范围",
+      "value": "≤30%",
+      "unit": "%",
+      "context": "在≤30%Un时应保证断路器不动作"
+    },
+    {
+      "device": "断路器",
+      "name": "接点开断能力",
+      "value": "5",
+      "unit": "A",
+      "context": "接点的开断能力为：DC220V 、 5A"
+    },
+    {
+      "device": "断路器",
+      "name": "计数器电源电压",
+      "value": "220",
+      "unit": "V",
+      "context": "计数器电源采用直流220V"
+    },
+    {
+      "device": "断路器",
+      "name": "动作次数",
+      "value": "6",
+      "unit": "位",
+      "context": "计数器应有6位数字显示器对所测到的动作次数进行显示"
+    },
+    {
+      "device": "断路器",
+      "name": "备用接点数量",
+      "value": "16",
+      "unit": "对",
+      "context": "断路器每相应有16对常开和16对常闭备用接点"
+    },
+    {
+      "device": "断路器",
+      "name": "蓄压筒合分能力",
+      "value": "2",
+      "unit": "次",
+      "context": "操动机构蓄压筒的容量应具有二次以上合分能力"
+    },
+    {
+      "device": "隔离开关",
+      "name": "额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "context": "额定电压: 72.5kV"
+    },
+    {
+      "device": "隔离开关",
+      "name": "额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "context": "额定频率: 50Hz"
+    },
+    {
+      "device": "隔离开关",
+      "name": "额定电流",
+      "value": "4000",
+      "unit": "A",
+      "context": "额定电流: 4000A/1250A"
+    },
+    {
+      "device": "隔离开关",
+      "name": "额定短时耐受电流",
+      "value": "40",
+      "unit": "kA",
+      "context": "额定短时耐受电流（有效值）: 40kA"
+    },
+    {
+      "device": "隔离开关",
+      "name": "额定短路持续时间",
+      "value": "3",
+      "unit": "s",
+      "context": "额定短路持续时间: 3s"
+    },
+    {
+      "device": "隔离开关",
+      "name": "额定峰值耐受电流",
+      "value": "100",
+      "unit": "kA",
+      "context": "额定峰值耐受电流（峰值）: 100kA"
+    },
+    {
+      "device": "隔离开关",
+      "name": "分、合电容电流",
+      "value": "1",
+      "unit": "A",
+      "context": "分、合电容电流（有效值）: 1A"
+    },
+    {
+      "device": "隔离开关",
+      "name": "分、合电感电流",
+      "value": "0.5",
+      "unit": "A",
+      "context": "分、合电感电流（有效值）: 0.5A"
+    },
+    {
+      "device": "隔离开关",
+      "name": "主回路电阻",
+      "value": "<",
+      "unit": "μΩ",
+      "context": "开关主回路电阻: &lt; 40μΩ"
+    },
+    {
+      "device": "隔离开关",
+      "name": "机械寿命",
+      "value": "10000",
+      "unit": "次",
+      "context": "三相机械稳定性操作次数不少于10000次"
+    },
+    {
+      "device": "隔离开关",
+      "name": "操作电压",
+      "value": "380/220",
+      "unit": "V",
+      "context": "操作控制回路电源为DC220V"
+    },
+    {
+      "device": "隔离开关",
+      "name": "操作电压",
+      "value": "220",
+      "unit": "V",
+      "context": "操作控制回路电源为DC220V"
+    },
+    {
+      "device": "隔离开关",
+      "name": "备用接点数量",
+      "value": "10",
+      "unit": "对",
+      "context": "每台隔离开关需有备用的常开与常闭接点各10对"
+    },
+    {
+      "device": "隔离开关",
+      "name": "接点开断能力",
+      "value": "2.5",
+      "unit": "A",
+      "context": "接点开断能力为DC220V ， 2.5A"
+    },
+    {
+      "device": "检修接地开关",
+      "name": "额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "context": "a . 额定电压 72.5kV"
+    },
+    {
+      "device": "检修接地开关",
+      "name": "额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "context": "b . 额定频率: 50Hz"
+    },
+    {
+      "device": "检修接地开关",
+      "name": "额定短时耐受电流（有效值）",
+      "value": "40",
+      "unit": "kA",
+      "context": "40kA"
+    },
+    {
+      "device": "检修接地开关",
+      "name": "额定短路持续时间",
+      "value": "3",
+      "unit": "s",
+      "context": "d. 额定短路持续时间: 3s"
+    },
+    {
+      "device": "检修接地开关",
+      "name": "额定峰值耐受电流（峰值）",
+      "value": "100",
+      "unit": "kA",
+      "context": "e. 额定峰值耐受电流（峰值）: 100kA"
+    },
+    {
+      "device": "检修接地开关",
+      "name": "接地端对外壳绝缘水平",
+      "value": "15",
+      "unit": "kV",
+      "context": "f. 接地开关接地端对外壳绝缘水平按工频耐压15kV(有效值) 、 1min设"
+    },
+    {
+      "device": "检修接地开关",
+      "name": "主回路接触电阻",
+      "value": "< 1000",
+      "unit": "μΩ",
+      "context": "g. 接地开关主回路接触电阻 < 1000μΩ"
+    },
+    {
+      "device": "检修接地开关",
+      "name": "机械寿命",
+      "value": "5000",
+      "unit": "次",
+      "context": "h . 机械寿命：在不检修、不调整、不更换零部件、的情况下，三相机械 稳定性操作次数不少于5000次。"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "context": "a. 额定电压: 72.5kV"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "context": "b. 额定频率: 50Hz"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "额定短时耐受电流（有效值）",
+      "value": "40",
+      "unit": "kA",
+      "context": "40kA"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "额定短路持续时间",
+      "value": "3",
+      "unit": "s",
+      "context": "d. 额定短路持续时间: 3s"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "额定短路电流关合次数",
+      "value": "≥2",
+      "unit": "",
+      "context": "e. 额定短路电流关合次数: ≥2"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "快速合闸时间",
+      "value": "< 0.1",
+      "unit": "s",
+      "context": "f. 快速合闸时间: <0.1s"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "额定峰值耐受电流（峰值）",
+      "value": "100",
+      "unit": "kA",
+      "context": "g. 额定峰值耐受电流（峰值）: 100kA"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "关合短路电流的能力",
+      "value": "100",
+      "unit": "kA",
+      "context": "h. 关合短路电流的能力: 100kA"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "接地端对外壳绝缘水平",
+      "value": "15",
+      "unit": "kV",
+      "context": "j. 接地开关接地端对外壳绝缘水平按工频耐压15kV（有效值） 、 1min设 计"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "主回路接触电阻",
+      "value": "< 100",
+      "unit": "μΩ",
+      "context": "k. 接地开关主回路接触电阻: < 100μΩ"
+    },
+    {
+      "device": "快速接地开关",
+      "name": "机械寿命",
+      "value": "5000",
+      "unit": "次",
+      "context": "l. 机械寿命：在不检修、不调整、不更换零部件的情况下，三相机械稳 定性操作次数不少于5000次。"
+    },
+    {
+      "device": "电流互感器",
+      "name": "额定电压",
+      "value": "66",
+      "unit": "kV",
+      "context": "a. 额定电压: 66kV"
+    },
+    {
+      "device": "电流互感器",
+      "name": "最高工作电压",
+      "value": "72.5",
+      "unit": "kV",
+      "context": "b. 最高工作电压: 72.5kV"
+    },
+    {
+      "device": "电流互感器",
+      "name": "额定动稳定电流",
+      "value": "100",
+      "unit": "kA",
+      "context": "c. 额定动稳定电流: 100kA（峰值）"
+    },
+    {
+      "device": "电流互感器",
+      "name": "额定热稳定电流",
+      "value": "40",
+      "unit": "kA",
+      "context": "d. 额定热稳定电流: 40kA（有效值）"
+    },
+    {
+      "device": "电压互感器（母线间隔）",
+      "name": "最高工作电压",
+      "value": "72.5",
+      "unit": "kV",
+      "context": "b. 最高工作电压: 72.5kV"
+    },
+    {
+      "device": "电压互感器（母线间隔）",
+      "name": "额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "context": "c. 额定频率: 50Hz"
+    },
+    {
+      "device": "电压互感器（母线间隔）",
+      "name": "容量",
+      "value": "10/50/50",
+      "unit": "VA",
+      "context": "10/50/50VA（母线间隔）"
+    },
+    {
+      "device": "电压互感器（母线间隔）",
+      "name": "容量",
+      "value": "30",
+      "unit": "VA",
+      "context": "30VA（母线间隔）"
+    },
+    {
+      "device": "电压互感器（主变间隔）",
+      "name": "额定电压",
+      "value": "66",
+      "unit": "kV",
+      "context": "66/ 3k V"
+    },
+    {
+      "device": "电压互感器（主变间隔）",
+      "name": "额定电压",
+      "value": "3",
+      "unit": "kV",
+      "context": "0.1/ 3k V ； 0.1/ 3k V；0.1/ 3k V；0.1/ 3"
+    },
+    {
+      "device": "电压互感器（主变间隔）",
+      "name": "剩余绕组电压",
+      "value": "100",
+      "unit": "V",
+      "context": "100V/3"
+    },
+    {
+      "device": "电压互感器（主变间隔）",
+      "name": "最高工作电压",
+      "value": "72.5",
+      "unit": "kV",
+      "context": "72.5kV"
+    },
+    {
+      "device": "电压互感器（主变间隔）",
+      "name": "容量",
+      "value": "10",
+      "unit": "VA",
+      "context": "10VA/30/30/30VA（主变间隔）"
+    },
+    {
+      "device": "电压互感器（主变间隔）",
+      "name": "容量",
+      "value": "30",
+      "unit": "VA",
+      "context": "30VA（主变间隔）"
+    },
+    {
+      "device": "金属氧化物避雷器",
+      "name": "系统额定电压",
+      "value": "66",
+      "unit": "kV",
+      "context": "系统额定电压: 66kV"
+    },
+    {
+      "device": "金属氧化物避雷器",
+      "name": "避雷器额定电压",
+      "value": "90",
+      "unit": "kV",
+      "context": "避雷器额定电压: 90kV"
+    },
+    {
+      "device": "金属氧化物避雷器",
+      "name": "长期持续运行电压",
+      "value": "72.5",
+      "unit": "kV",
+      "context": "长期持续运行电压: ≥72.5kV"
+    },
+    {
+      "device": "金属氧化物避雷器",
+      "name": "标称放电电流",
+      "value": "10",
+      "unit": "kA",
+      "context": "标称放电电流: 10kA"
+    },
+    {
+      "device": "金属氧化物避雷器",
+      "name": "直流 1mA 参考电压",
+      "value": "130",
+      "unit": "kV",
+      "context": "直流 1mA 参考电压: ≥130kV"
+    },
+    {
+      "device": "金属氧化物避雷器",
+      "name": "标称放电电流下雷电冲击残压",
+      "value": "235",
+      "unit": "kV",
+      "context": "标称放电电流下雷电冲击残压: ≤235kV"
+    },
+    {
+      "device": "金属氧化物避雷器",
+      "name": "标称放电电流下陡波冲击残压",
+      "value": "264",
+      "unit": "kV",
+      "context": "标称放电电流下陡波冲击残压: ≤264kV"
+    },
+    {
+      "device": "金属氧化物避雷器",
+      "name": "线路放电等级",
+      "value": "4",
+      "unit": "",
+      "context": "4 级"
+    },
+    {
+      "device": "GIS 母线",
+      "name": "导体材质",
+      "value": "高导电率的铝合金或电解铜",
+      "unit": "",
+      "context": "母线导体材质为高导电率的铝合金或电解铜。"
+    },
+    {
+      "device": "绝缘子",
+      "name": "局部放电量",
+      "value": "3",
+      "unit": "pC",
+      "context": "局部放电量（在 1.1×72.5/√3kV 电压下）不大于 3pC 。"
+    },
+    {
+      "device": "控制柜",
+      "name": "电缆截面",
+      "value": "1.5",
+      "unit": "mm²",
+      "context": "柜内所有仪表，控制设备，电源报警，照明用的电线应为铜绞线，其截 面不小于 1.5mm 2 。"
+    },
+    {
+      "device": "动力电缆",
+      "name": "电缆截面",
+      "value": "2.5",
+      "unit": "mm²",
+      "context": "动力电缆截面不小于 2.5mm 2 。"
+    },
+    {
+      "device": "绝缘测试",
+      "name": "耐受电压",
+      "value": "2000",
+      "unit": "V",
+      "context": "控制柜内所有电路与外壳间的绝缘均应耐受 2000V 工频交流电压 1min 试验而无绝缘击穿或闪络现象。"
+    },
+    {
+      "device": "温湿度控制器",
+      "name": "电压",
+      "value": "220",
+      "unit": "V",
+      "context": "箱内还应有-个交流 220V 、 5A 的插座。"
+    },
+    {
+      "device": "接地电缆",
+      "name": "截面",
+      "value": "240",
+      "unit": "mm²",
+      "context": "接地电缆采用 JD-ZRA-YJY-8.7/10kV-1×240mm 2 （接地电缆截面厂家核算后 确定），应采用阻燃 A 类  。"
+    },
+    {
+      "device": "SF6气体",
+      "name": "纯度",
+      "value": "≥99.9",
+      "unit": "%",
+      "context": "纯度（SF6） ≥99.9%（质量分数）"
+    },
+    {
+      "device": "SF6气体",
+      "name": "空气含量",
+      "value": "≤0.05",
+      "unit": "%",
+      "context": "空气（N2＋O2） ≤0.05%（质量分数）"
+    },
+    {
+      "device": "SF6气体",
+      "name": "四氟化碳含量",
+      "value": "≤0.05",
+      "unit": "%",
+      "context": "四氟化碳（CF4） ≤0.05%（质量分数）"
+    },
+    {
+      "device": "SF6气体",
+      "name": "湿度",
+      "value": "≤8",
+      "unit": "μg/g",
+      "context": "湿度（H2O） ≤8μg/g"
+    },
+    {
+      "device": "SF6气体",
+      "name": "酸度",
+      "value": "≤0.3",
+      "unit": "μg/g",
+      "context": "酸度（以 HF 计） ≤0.3μg/g"
+    },
+    {
+      "device": "SF6气体",
+      "name": "可水解氟化物",
+      "value": "≤1.0",
+      "unit": "μg/g",
+      "context": "可水解氟化物（以 HF 计） ≤1.0μg/g"
+    },
+    {
+      "device": "SF6气体",
+      "name": "矿物油含量",
+      "value": "≤10",
+      "unit": "μg/g",
+      "context": "矿物油 ≤10μg/g"
+    },
+    {
+      "device": "SF6气体",
+      "name": "湿度交接验收值",
+      "value": "≤150",
+      "unit": "μg/g",
+      "context": "交接验收值 ≤150"
+    },
+    {
+      "device": "SF6气体",
+      "name": "湿度运行值",
+      "value": "≤300",
+      "unit": "μg/g",
+      "context": "运行值 ≤300"
+    }
+  ]
+}

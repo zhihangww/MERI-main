@@ -93,3 +93,55 @@ def chat_completion_request(messages, tools=None, tool_choice=None, response_for
         print("Unable to generate ChatCompletion response")
         print(f"Exception: {e}")
         raise  # Re-raise the exception instead of returning it
+
+
+def complete_chat(model: str, messages: list, temperature: float = 0.3, 
+                  response_format: dict = None, max_tokens: int = 8192) -> str:
+    """
+    简化的聊天补全函数，直接返回文本内容
+    
+    Args:
+        model: 模型名称，如 "qwen/qwen-turbo"
+        messages: 消息列表
+        temperature: 温度参数
+        response_format: 响应格式
+        max_tokens: 最大token数
+    
+    Returns:
+        str: 模型返回的文本内容
+    """
+    try:
+        # 检查是否是通义千问模型
+        if is_qwen_model(model):
+            actual_model = model.replace("qwen/", "")
+            api_key = os.getenv("DASHSCOPE_API_KEY")
+            
+            if not api_key:
+                raise ValueError("DASHSCOPE_API_KEY 环境变量未设置")
+            
+            # Qwen 模型 max_tokens 上限是 8192
+            max_tokens = min(max_tokens, 8192)
+            
+            response = completion(
+                model=f"openai/{actual_model}",
+                messages=messages,
+                response_format=response_format,
+                max_tokens=max_tokens,
+                temperature=temperature,
+                api_base=DASHSCOPE_API_BASE,
+                api_key=api_key,
+            )
+        else:
+            response = completion(
+                model=model,
+                messages=messages,
+                response_format=response_format,
+                max_tokens=max_tokens,
+                temperature=temperature,
+            )
+        
+        return response.choices[0].message.content
+        
+    except Exception as e:
+        print(f"LLM调用失败: {e}")
+        raise
