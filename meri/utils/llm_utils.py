@@ -15,6 +15,27 @@ def is_qwen_model(model: str) -> bool:
     """检查是否是通义千问模型"""
     return model.startswith("qwen/")
 
+def is_azure_model(model: str) -> bool:
+    """检查是否是 Azure OpenAI 模型（LiteLLM 命名约定）"""
+    return model.startswith("azure/")
+
+def _get_azure_openai_config() -> tuple[str | None, str | None, str | None]:
+    """
+    获取 Azure OpenAI 配置。
+
+    兼容两套环境变量：
+    1) 本项目新增（避免影响既有环境变量命名）：AZURE_OPENAI_*
+    2) LiteLLM 传统命名：AZURE_API_*
+    """
+    api_key = os.getenv("AZURE_OPENAI_API_KEY") or os.getenv("AZURE_API_KEY")
+    api_base = (
+        os.getenv("AZURE_OPENAI_API_BASE")
+        or os.getenv("AZURE_OPENAI_ENDPOINT")
+        or os.getenv("AZURE_API_BASE")
+    )
+    api_version = os.getenv("AZURE_OPENAI_API_VERSION") or os.getenv("AZURE_API_VERSION")
+    return api_key, api_base, api_version
+
 def num_tokens_from_string(string: str, encoding_name: str) -> int:
     encoding = tiktoken.get_encoding(encoding_name)
     num_tokens = len(encoding.encode(string))
@@ -73,6 +94,26 @@ def chat_completion_request(messages, tools=None, tool_choice=None, response_for
                 api_key=api_key,
             )
             print(f"[调试] 通义千问调用成功!")
+        elif is_azure_model(model):
+            api_key, api_base, api_version = _get_azure_openai_config()
+
+            if not api_key:
+                raise ValueError("Azure OpenAI 未配置 API Key：请设置 AZURE_OPENAI_API_KEY（或兼容的 AZURE_API_KEY）")
+            if not api_base:
+                raise ValueError("Azure OpenAI 未配置 Endpoint：请设置 AZURE_OPENAI_ENDPOINT/AZURE_OPENAI_API_BASE（或兼容的 AZURE_API_BASE）")
+
+            response = completion(
+                model=model,
+                messages=messages,
+                tools=tools,
+                tool_choice=tool_choice,
+                response_format=response_format,
+                max_tokens=4096,
+                temperature=temp,
+                api_base=api_base,
+                api_key=api_key,
+                api_version=api_version,
+            )
         else:
             print(f"[调试] 使用其他模型: {model}")
             # 其他模型（OpenAI、Azure 等）
@@ -130,6 +171,24 @@ def complete_chat(model: str, messages: list, temperature: float = 0.3,
                 temperature=temperature,
                 api_base=DASHSCOPE_API_BASE,
                 api_key=api_key,
+            )
+        elif is_azure_model(model):
+            api_key, api_base, api_version = _get_azure_openai_config()
+
+            if not api_key:
+                raise ValueError("Azure OpenAI 未配置 API Key：请设置 AZURE_OPENAI_API_KEY（或兼容的 AZURE_API_KEY）")
+            if not api_base:
+                raise ValueError("Azure OpenAI 未配置 Endpoint：请设置 AZURE_OPENAI_ENDPOINT/AZURE_OPENAI_API_BASE（或兼容的 AZURE_API_BASE）")
+
+            response = completion(
+                model=model,
+                messages=messages,
+                response_format=response_format,
+                max_tokens=max_tokens,
+                temperature=temperature,
+                api_base=api_base,
+                api_key=api_key,
+                api_version=api_version,
             )
         else:
             response = completion(

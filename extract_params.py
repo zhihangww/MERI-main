@@ -36,7 +36,7 @@ PDF_PATH = "data/demo_data/final.pdf"
 PARAMS_FILE = "params_list.txt"
 
 # 使用的模型
-MODEL = "qwen/qwen3-max"
+MODEL = "azure/gpt-4.1"
 
 # 输出目录
 OUTPUT_DIR = "output"
@@ -428,7 +428,7 @@ def main():
     # 保存结果
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%m_%d_%H%M")
-    output_file = os.path.join(OUTPUT_DIR, f"extraction_{timestamp}.json")
+    output_file = os.path.join(OUTPUT_DIR, f"ex_azure_{timestamp}.json")
     
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)

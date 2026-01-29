@@ -115,6 +115,14 @@ This package uses LiteLLM as a wrapper to interact with LLMs. The model name can
 - OpenAI API: provide OPENAI_API_KEY in the .env file. Model name will be e.g. gpt-4o-mini
 - Azure API: provide AZURE_API_KEY and AZURE_API_BASE in the .env and the model name will be e.g. azure/gpt-4o
 
+#### Azure OpenAI (GPT) quick setup
+- **1) Create a deployment**: in Azure AI Foundry / Azure Portal, create a model *deployment* (you choose the deployment name, e.g. `gpt-4o`).
+- **2) Get Key + Endpoint**: open your Azure OpenAI resource and go to **Keys and Endpoint**. Copy **Key 1** (or Key 2) and the **Endpoint**.
+- **3) Configure `.env`**: you can use either LiteLLM's env var names, or the additional `AZURE_OPENAI_*` names supported by this repo.
+  - LiteLLM style: `AZURE_API_KEY`, `AZURE_API_BASE`, (optional) `AZURE_API_VERSION`
+  - This repo (extra): `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, (optional) `AZURE_OPENAI_API_VERSION`
+- **4) Use model name**: pass `model="azure/<deployment-name>"` (example: `azure/gpt-4o`).
+
 The models must be multi-modal model, i.e. be able to process text as well as images.
 
 # Demo

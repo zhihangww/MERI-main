@@ -23,10 +23,10 @@ from openpyxl.utils import get_column_letter
 # ============================================================
 
 # 对比结果文件路径（修改为实际文件名）
-COMPARISON_RESULT = "output/comparison_01_23_1426.json"
+COMPARISON_RESULT = "output/com_azure_01_28_1144.json"
 
 # 提取结果文件路径（用于获取未匹配参数的完整信息）
-EXTRACTION_RESULT = "output/extraction_01_23_1411.json"
+EXTRACTION_RESULT = "output/ex_azure_01_28_1057.json"
 
 # 输出目录
 OUTPUT_DIR = "output"
@@ -329,7 +329,7 @@ def main():
     # 生成输出文件名
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%m_%d_%H%M")
-    output_file = os.path.join(OUTPUT_DIR, f"report_{timestamp}.xlsx")
+    output_file = os.path.join(OUTPUT_DIR, f"report_azure_{timestamp}.xlsx")
     
     # 导出Excel
     print(f"\n📊 生成Excel报告...")

@@ -22,13 +22,13 @@ from meri.utils.llm_utils import complete_chat
 # ============================================================
 
 # 提取结果文件路径（修改为实际文件名）
-EXTRACTION_RESULT = "output/extraction_01_23_1411.json"
+EXTRACTION_RESULT = "output/ex_azure_01_28_1057.json"
 
 # 规范数据库文件路径
 SPEC_DATABASE = "spec_database.json"
 
 # 使用的模型
-MODEL = "qwen/qwen3-max"
+MODEL = "azure/gpt-4.1"
 
 # 输出目录
 OUTPUT_DIR = "output"
@@ -66,12 +66,32 @@ COMPARE_PROMPT = Template("""
 - "快速接地开关额定短时耐受电流" ≠ "检修接地开关额定短时耐受电流"（不同设备）
 
 ### 3. 数值判断规则
+
+#### 3.1 带符号的规范值（直接按符号判断）
 - 规范"≤25ms"，用户"20ms" → 符合（20 ≤ 25）
 - 规范"≤25ms"，用户"30ms" → 不符合（30 > 25）
 - 规范"≥10000次"，用户"10000次" → 符合（10000 ≥ 10000）
 - 规范"4.8~5.8m/s"，用户"5.2m/s" → 符合（在范围内）
-- 规范"40kA"，用户"40kA" → 符合（相等）
-- 规范"40kA"，用户"35kA" → 需判断是最小值还是精确值
+
+#### 3.2 能力型参数（电流、电压、耐受值等）
+对于以下类型的参数，规范值代表设备的最大能力/额定值：
+- 额定电流、短路电流、耐受电流、关合电流、开断电流等
+- 额定电压、耐受电压、冲击耐压等
+- 峰值耐受电流、短时耐受电流等
+- 机械寿命是特殊的能力型参数，用户值比规范值小或者等于才能实现，如果用户值 ≥ 规范值则不符合，否则符合
+                          
+**判断逻辑**：用户要求值 ≤ 规范值 → 合规；用户要求值 > 规范值 → 不合规；不论大于还是小于，均视为带有边界值，即大于5000就视为大于等于5000。
+- 规范"40kA"，用户"40kA" → 符合（等于设备能力）
+- 规范"40kA"，用户"35kA" → 符合（在设备能力范围内）
+- 规范"40kA"，用户"50kA" → 不符合（超出设备能力）
+- 规范"106kA"，用户"100kA" → 符合（在设备能力范围内）
+- 规范"600kV"，用户"550kV" → 符合（在设备能力范围内）
+- 规范"600kV"，用户"650kV" → 不符合（超出设备能力）
+- 规范"机械寿命≥2000次"，用户"5000次" → 不符合
+- 规范"机械寿命≥5000次"，用户"3000次" → 符合
+
+#### 3.3 精确匹配型参数
+对于断口数、操作顺序、电源电压等参数，需要精确匹配或兼容匹配
 
 ### 4. 未匹配情况
 如果用户参数在规范数据库中找不到对应项，则 matched_spec_name 为 null
@@ -352,7 +372,7 @@ def main():
     # 保存结果
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%m_%d_%H%M")
-    output_file = os.path.join(OUTPUT_DIR, f"comparison_{timestamp}.json")
+    output_file = os.path.join(OUTPUT_DIR, f"com_azure_{timestamp}.json")
     
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
