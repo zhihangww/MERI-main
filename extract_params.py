@@ -30,7 +30,7 @@ from meri.utils.docling_utils import export_to_html
 # ============================================================
 
 # 待提取的PDF文件路径
-PDF_PATH = "data/demo_data/final.pdf"
+PDF_PATH = "data/demo_data/test1_chn.pdf"
 
 # 预定义参数列表文件
 PARAMS_FILE = "params_list.txt"
@@ -122,19 +122,19 @@ class ParamsExtractor:
     
     def load_params_list(self, params_file: str):
         """加载预定义参数列表"""
-        print(f"📂 加载参数列表: {params_file}")
+        print(f"加载参数列表: {params_file}")
         with open(params_file, "r", encoding="utf-8") as f:
             lines = f.readlines()
         
         self.params_list = [line.strip() for line in lines if line.strip()]
-        print(f"  ✓ 加载了 {len(self.params_list)} 个参数")
+        print(f"✓ 加载了 {len(self.params_list)} 个参数")
     
     def _convert_to_html(self, file_path: str) -> str:
         """将文档转换为HTML"""
-        print(f"📄 转换文档: {file_path}")
+        print(f"转换文档: {file_path}")
         result = self.converter.convert(file_path)
         html_content = export_to_html(result.document)
-        print(f"  ✓ 转换完成，HTML长度: {len(html_content)} 字符")
+        print(f"✓ 转换完成，HTML长度: {len(html_content)} 字符")
         return html_content
     
     def _chunk_document(self, html_content: str) -> list:
@@ -160,7 +160,7 @@ class ParamsExtractor:
             chunks.append(chunk)
             current_pos = end_pos
         
-        print(f"  📦 文档分为 {len(chunks)} 个块")
+        print(f"   文档分为 {len(chunks)} 个块")
         return chunks
     
     def _chunk_params(self, params: list) -> list:
@@ -307,7 +307,7 @@ class ParamsExtractor:
         doc_chunks = self._chunk_document(html_content)
         params_batches = self._chunk_params(self.params_list)
         
-        print(f"\n📊 处理计划:")
+        print(f"\n处理计划:")
         print(f"  文档块数: {len(doc_chunks)}")
         print(f"  参数批次: {len(params_batches)}")
         
@@ -321,17 +321,17 @@ class ParamsExtractor:
             remaining_params = [p for p in self.params_list if p not in found_params]
             
             if not remaining_params:
-                print(f"\n✅ 所有参数已找到，跳过剩余文档块")
+                print(f"\n 所有参数已找到，跳过剩余文档块")
                 break
             
-            print(f"\n🔄 处理文档块 {chunk_idx + 1}/{len(doc_chunks)} (待查参数: {len(remaining_params)})")
+            print(f"\n 处理文档块 {chunk_idx + 1}/{len(doc_chunks)} (待查参数: {len(remaining_params)})")
             
             # 如果待查参数太多，分批处理
             param_batches = self._chunk_params(remaining_params)
             
             for batch_idx, params_batch in enumerate(param_batches):
                 if len(param_batches) > 1:
-                    print(f"  📦 参数批次 {batch_idx + 1}/{len(param_batches)}")
+                    print(f"   参数批次 {batch_idx + 1}/{len(param_batches)}")
                 
                 try:
                     result = self._extract_batch(chunk, params_batch)
@@ -375,7 +375,7 @@ class ParamsExtractor:
         
         # 统计
         print(f"\n{'='*60}")
-        print(f"📊 提取结果统计")
+        print(f" 提取结果统计")
         print(f"{'='*60}")
         print(f"  预定义参数:   {len(self.params_list)}")
         print(f"  成功提取:     {len(ordered_params)}")
@@ -409,11 +409,11 @@ def main():
     
     # 检查文件
     if not os.path.exists(PDF_PATH):
-        print(f"\n❌ PDF文件不存在: {PDF_PATH}")
+        print(f"\n PDF文件不存在: {PDF_PATH}")
         return
     
     if not os.path.exists(PARAMS_FILE):
-        print(f"\n❌ 参数列表文件不存在: {PARAMS_FILE}")
+        print(f"\n 参数列表文件不存在: {PARAMS_FILE}")
         return
     
     # 创建提取器
@@ -428,16 +428,16 @@ def main():
     # 保存结果
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%m_%d_%H%M")
-    output_file = os.path.join(OUTPUT_DIR, f"ex_azure_{timestamp}.json")
+    output_file = os.path.join(OUTPUT_DIR, f"ex110_az_{timestamp}.json")
     
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
     
-    print(f"\n💾 提取结果已保存到: {output_file}")
+    print(f"\n 提取结果已保存到: {output_file}")
     
     # 显示部分结果预览
     if result["parameters"]:
-        print(f"\n📋 提取结果预览（前10个）:")
+        print(f"\n 提取结果预览（前10个）:")
         for param in result["parameters"][:10]:
             print(f"  - {param.get('name')}: {param.get('value')}{param.get('unit', '')}")
         if len(result["parameters"]) > 10:
@@ -445,7 +445,7 @@ def main():
     
     # 显示未找到的参数
     if result["not_found"]:
-        print(f"\n⚠️ 未找到的参数 ({len(result['not_found'])}个):")
+        print(f"\n 未找到的参数 ({len(result['not_found'])}个):")
         for name in result["not_found"][:10]:
             print(f"  - {name}")
         if len(result["not_found"]) > 10:

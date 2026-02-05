@@ -23,10 +23,10 @@ from openpyxl.utils import get_column_letter
 # ============================================================
 
 # 对比结果文件路径（修改为实际文件名）
-COMPARISON_RESULT = "output/com_azure_01_28_1144.json"
+COMPARISON_RESULT = "output/com110_az_02_04_1528.json"
 
 # 提取结果文件路径（用于获取未匹配参数的完整信息）
-EXTRACTION_RESULT = "output/ex_azure_01_28_1057.json"
+EXTRACTION_RESULT = "output/ex110_az_02_04_1413.json"
 
 # 输出目录
 OUTPUT_DIR = "output"

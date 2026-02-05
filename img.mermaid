@@ -1,0 +1,32 @@
+flowchart TB
+  subgraph 输入
+    PDF[PDF 技术文档]
+    SCHEMA[JSON Schema 蓝图]
+    LIST[参数清单 params_list.txt]
+    SPEC[规范库 spec_database.json]
+  end
+
+  subgraph 文档解析与中间层
+    DOC[Docling 文档转换\nDocumentConverter]
+    HTML[HTML 中间表示\n含 page_index + bbox]
+    ENH[布局增强\n排序 + 键值对合并]
+    CHUNK[分块器\n文本+图片 chunk]
+  end
+
+  subgraph 抽取层
+    EX1[Schema 驱动抽取\nMERI + JsonExtractor]
+    EX2[清单驱动抽取\nParamsExtractor]
+  end
+
+  subgraph 对比与交付
+    CMP[规范匹配+合规判定\nParamComparator]
+    XLSX[Excel 报告\nexport_excel.py]
+    OUTJSON[JSON 结果文件\noutput/*.json]
+  end
+
+  PDF --> DOC --> HTML --> ENH --> CHUNK --> EX1 --> OUTJSON
+  PDF --> DOC --> HTML --> EX2 --> OUTJSON
+  SCHEMA --> EX1
+  LIST --> EX2
+  SPEC --> CMP
+  OUTJSON --> CMP --> OUTJSON --> XLSX

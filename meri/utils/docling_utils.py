@@ -217,8 +217,10 @@ def export_to_html(document: DoclingDocument, labels: set[DocItemLabel] = DEFAUL
 
             
         elif isinstance(item, PictureItem) and not strict_text:
-            #attrs["src"] = 
-
+            # 跳过没有有效图片数据的元素（如形状、签名等）
+            if item.image is None or item.image.uri is None:
+                continue
+            
             # add image
             img_element = html_element(f"img", "", {"src": item.image.uri})
             html_parts.append(html_element("div", "image_wrapper", attrs, content=img_element))

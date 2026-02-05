@@ -22,7 +22,7 @@ from meri.utils.llm_utils import complete_chat
 # ============================================================
 
 # 提取结果文件路径（修改为实际文件名）
-EXTRACTION_RESULT = "output/ex_azure_01_28_1057.json"
+EXTRACTION_RESULT = "output/ex110_az_02_04_1413.json"
 
 # 规范数据库文件路径
 SPEC_DATABASE = "spec_database.json"
@@ -372,7 +372,7 @@ def main():
     # 保存结果
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%m_%d_%H%M")
-    output_file = os.path.join(OUTPUT_DIR, f"com_azure_{timestamp}.json")
+    output_file = os.path.join(OUTPUT_DIR, f"com110_az_{timestamp}.json")
     
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)

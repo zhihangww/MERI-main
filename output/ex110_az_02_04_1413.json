@@ -1,0 +1,650 @@
+{
+  "source_file": "data/demo_data/test1_chn.pdf",
+  "params_file": "params_list.txt",
+  "extraction_time": "2026-02-04T14:13:56.783422",
+  "model": "azure/gpt-4.1",
+  "statistics": {
+    "total_requested": 110,
+    "found": 105,
+    "not_found": 5
+  },
+  "parameters": [
+    {
+      "name": "GIS整体额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "original_text": "额定电压 72.5kV"
+    },
+    {
+      "name": "GIS整体额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "original_text": "额定频率 50Hz"
+    },
+    {
+      "name": "GIS整体额定电流",
+      "value": "3150",
+      "unit": "A",
+      "original_text": "额定电流 3150A （主变间隔）"
+    },
+    {
+      "name": "GIS整体额定短时耐受电流",
+      "value": "31.5",
+      "unit": "kA",
+      "original_text": "额定短时耐受电流 31.5kA （有效值）"
+    },
+    {
+      "name": "GIS整体额定峰值耐受电流",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "额定峰值耐受电流 100kA"
+    },
+    {
+      "name": "GIS整体额定工频耐受电压（断口间极间）",
+      "value": "160",
+      "unit": "kV",
+      "original_text": "额定工频耐受电压（ 1min ，有效值） 断口间及极间 160kV"
+    },
+    {
+      "name": "GIS整体额定工频耐受电压（隔离断口间）",
+      "value": "162+42",
+      "unit": "kV",
+      "original_text": "额定工频耐受电压（ 1min ，有效值） 隔离断口间 162+42kV"
+    },
+    {
+      "name": "GIS整体额定雷电冲击耐受电压（断口间极间）",
+      "value": "380",
+      "unit": "kV",
+      "original_text": "额定雷电冲击耐受电压（峰值， 1.2/50 μs ） 断口间及极间 380kV"
+    },
+    {
+      "name": "GIS整体额定雷电冲击耐受电压（隔离断口间）",
+      "value": "350+60",
+      "unit": "kV",
+      "original_text": "额定雷电冲击耐受电压（峰值， 1.2/50 μs ） 隔离断口间 350+60kV"
+    },
+    {
+      "name": "GIS单个绝缘元件局部放电量",
+      "value": "≤2",
+      "unit": "pC",
+      "original_text": "GIS 单个绝缘元件的局部放电量应不大于 2pC"
+    },
+    {
+      "name": "GIS组装整体局部放电量",
+      "value": "≤5",
+      "unit": "pC",
+      "original_text": "组装后整体的局部放电量应不大于 5pC"
+    },
+    {
+      "name": "GIS整体六氟化硫漏气率",
+      "value": "≤0.1",
+      "unit": "%/年",
+      "original_text": "SF6 气体漏气率：不大于 0.1%/ 年"
+    },
+    {
+      "name": "断路器断口数",
+      "value": "1",
+      "unit": "",
+      "original_text": "每相断口数： 1"
+    },
+    {
+      "name": "断路器额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "original_text": "断路器 额定电压 72.5kV"
+    },
+    {
+      "name": "断路器额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "original_text": "断路器 额定频率 50Hz"
+    },
+    {
+      "name": "断路器额定电流",
+      "value": "3150/1250",
+      "unit": "A",
+      "original_text": "断路器 额定电流 3150A/1250A"
+    },
+    {
+      "name": "断路器额定操作顺序",
+      "value": "O-0.3S-CO-180s-CO",
+      "unit": "",
+      "original_text": "断路器 额定操作顺序 O-0.3S-CO-180s-CO"
+    },
+    {
+      "name": "断路器开断时间",
+      "value": "≤50",
+      "unit": "ms",
+      "original_text": "断路器 开断时间 ≤50ms"
+    },
+    {
+      "name": "断路器分闸时间",
+      "value": "≤40",
+      "unit": "ms",
+      "original_text": "断路器 分闸时间 ≤40ms"
+    },
+    {
+      "name": "断路器合闸时间",
+      "value": "≤100",
+      "unit": "ms",
+      "original_text": "断路器 合闸时间 ≤100ms"
+    },
+    {
+      "name": "断路器合分时间",
+      "value": "≤60",
+      "unit": "ms",
+      "original_text": "断路器 合分时间（金属短接时间） ≤60ms"
+    },
+    {
+      "name": "断路器重合闸无电流间隙时间",
+      "value": "≥0.3",
+      "unit": "s",
+      "original_text": "断路器 重合闸无电流间隔时间（分合时间） 0.3s 及以上，可调"
+    },
+    {
+      "name": "断路器分闸不同期性",
+      "value": "≤3",
+      "unit": "ms",
+      "original_text": "断路器 分闸不同期性 ≤3ms"
+    },
+    {
+      "name": "断路器合闸不同期性",
+      "value": "≤5",
+      "unit": "ms",
+      "original_text": "断路器 合闸不同期性 ≤5ms"
+    },
+    {
+      "name": "断路器额定短路开断电流交流分量",
+      "value": "31.5",
+      "unit": "kA",
+      "original_text": "断路器 额定短路开断电流 交流分量（有效值） 31.5kA"
+    },
+    {
+      "name": "断路器额定短路开断电流直流分量",
+      "value": "≥50",
+      "unit": "%",
+      "original_text": "断路器 直流分量（百分数，对应于分闸时间 30ms ） ≥ 50 "
+    },
+    {
+      "name": "断路器TRV特性参数",
+      "value": "{\"100%\":{\"首相开断系数\":1.3,\"振幅系数\":1.4,\"恢复电压上升速度\":0.75},\"60%\":{\"首相开断系数\":1.3,\"振幅系数\":1.5,\"恢复电压上升速度\":1.85},\"30%\":{\"首相开断系数\":1.5,\"振幅系数\":1.5,\"恢复电压上升速度\":3.7},\"10%\":{\"首相开断系数\":1.5,\"振幅系数\":1.7,\"恢复电压上升速度\":3.7}}",
+      "unit": "",
+      "original_text": "断路器 TRV特性参数（表格）"
+    },
+    {
+      "name": "断路器最大电缆充电电流",
+      "value": "≥125",
+      "unit": "A",
+      "original_text": "在额定电压下应能开断的最大电缆充电电流不低于 125A"
+    },
+    {
+      "name": "断路器空载变压器开断能力",
+      "value": "520",
+      "unit": "MVA",
+      "original_text": "空载变压器开断能力 520MVA"
+    },
+    {
+      "name": "断路器L90近距故障开断能力",
+      "value": "36",
+      "unit": "kA",
+      "original_text": "L90 、 36kA"
+    },
+    {
+      "name": "断路器L75近距故障开断能力",
+      "value": "30",
+      "unit": "kA",
+      "original_text": "L75 、 30kA"
+    },
+    {
+      "name": "断路器L60近距故障开断能力",
+      "value": "24",
+      "unit": "kA",
+      "original_text": "L60 、 24kA"
+    },
+    {
+      "name": "断路器25%额定开断电流",
+      "value": "10",
+      "unit": "kA",
+      "original_text": "额定失步开断电流： 25% 额定开断电流 10kA"
+    },
+    {
+      "name": "断路器工频恢复电压",
+      "value": "2.5",
+      "unit": "倍额定相电压",
+      "original_text": "工频恢复电压： 2.5 倍额定相电压"
+    },
+    {
+      "name": "断路器暂态恢复电压值",
+      "value": "0.55",
+      "unit": "kV/μs",
+      "original_text": "暂态恢复电压值： 0.55kV/ μs"
+    },
+    {
+      "name": "断路器额定短路关合电流",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "断路器 额定短路关合电流 100kA （峰值）"
+    },
+    {
+      "name": "断路器备用接点数量（对）",
+      "value": "16对常开和16对常闭/每相",
+      "unit": "对",
+      "original_text": "断路器每相应有 16 对常开和 16 对常闭备用接点。"
+    },
+    {
+      "name": "断路器备用接点开断能力",
+      "value": "DC220V, 5A",
+      "unit": "DC220V, 5A",
+      "original_text": "接点的开断能力为： DC220V 、 5A 。"
+    },
+    {
+      "name": "断路器机械寿命",
+      "value": "≥10000",
+      "unit": "次",
+      "original_text": "三相机械稳定性操作次数不少于 10000 次"
+    },
+    {
+      "name": "断路器额定短路关合电流",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "断路器 额定短路关合电流 100kA （峰值）"
+    },
+    {
+      "name": "断路器操作噪声水平",
+      "value": "≤110",
+      "unit": "dB",
+      "original_text": "断路器操作时噪声水平不应超过 110dB"
+    },
+    {
+      "name": "断路器噪声水平测定位置",
+      "value": "2",
+      "unit": "m",
+      "original_text": "噪声水平的测定位置为距断路器及其操作机构最近部位 2m ，高 1.2m 处"
+    },
+    {
+      "name": "绝缘子局部放电量",
+      "value": "≤3pC",
+      "unit": "pC",
+      "original_text": "绝缘子的局部放电量（在 1.1×72.5/ √ 3kV 电压下）不大于 3pC 。"
+    },
+    {
+      "name": "避雷器绝缘材料",
+      "value": "SF6",
+      "unit": "",
+      "original_text": "绝缘材料 SF6"
+    },
+    {
+      "name": "避雷器系统额定电压",
+      "value": "66",
+      "unit": "kV",
+      "original_text": "系统额定电压 66kV"
+    },
+    {
+      "name": "避雷器额定电压",
+      "value": "90",
+      "unit": "kV",
+      "original_text": "避雷器额定电压 90kV"
+    },
+    {
+      "name": "避雷器长期持续运行电压",
+      "value": "≥ 72.5",
+      "unit": "kV",
+      "original_text": "长期持续运行电压 ≥ 72.5kV"
+    },
+    {
+      "name": "避雷器标称放电电流",
+      "value": "10",
+      "unit": "kA",
+      "original_text": "标称放电电流 10kA"
+    },
+    {
+      "name": "避雷器直流1mA参考电压",
+      "value": "≥ 130",
+      "unit": "kV",
+      "original_text": "直流 1mA 参考电压 ≥ 130kV"
+    },
+    {
+      "name": "避雷器标称放电电流下雷电冲击残压",
+      "value": "≤ 235",
+      "unit": "kV",
+      "original_text": "标称放电电流下雷电冲击残压 ≤ 235kV"
+    },
+    {
+      "name": "避雷器标称放电电流下陡坡冲击残压",
+      "value": "≤ 264",
+      "unit": "kV",
+      "original_text": "标称放电电流下陡波冲击残压 ≤ 264kV"
+    },
+    {
+      "name": "隔离开关额定电压",
+      "value": "72.5",
+      "unit": "kV",
+      "original_text": "额定电压 72.5kV"
+    },
+    {
+      "name": "隔离开关额定频率",
+      "value": "50",
+      "unit": "Hz",
+      "original_text": "额定频率 50Hz"
+    },
+    {
+      "name": "隔离开关额定短时耐受电流",
+      "value": "31.5",
+      "unit": "kA",
+      "original_text": "额定短时耐受电流 31.5kA （有效值）"
+    },
+    {
+      "name": "隔离开关额定峰值耐受电流",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "额定峰值耐受电流 100kA"
+    },
+    {
+      "name": "隔离开关分合电感电流",
+      "value": "6A",
+      "unit": "A",
+      "original_text": "h. 分、合电感电流（有效值） 6A"
+    },
+    {
+      "name": "隔离开关分合电容电流",
+      "value": "1A",
+      "unit": "A",
+      "original_text": "g. 分、合电容电流（有效值） 1A"
+    },
+    {
+      "name": "隔离开关操动机构电源",
+      "value": "交流 50Hz 、 380/220V 三相五线制",
+      "unit": "AC 380/220V",
+      "original_text": "操动机构的电源为交流 50Hz 、 380/220V 三相五线制。"
+    },
+    {
+      "name": "隔离开关操作控制回路电源",
+      "value": "DC220V",
+      "unit": "DC220V",
+      "original_text": "操作控制回路电源为 DC220V 。"
+    },
+    {
+      "name": "隔离开关备用接点数量",
+      "value": "常开与常闭接点各10对",
+      "unit": "对",
+      "original_text": "每台隔离开关需有备用的常开与常闭接点各 10 对"
+    },
+    {
+      "name": "隔离开关接点开断能力",
+      "value": "DC220V, 2.5A",
+      "unit": "DC220V, 2.5A",
+      "original_text": "接点开断能力为 DC220V ， 2.5A 。"
+    },
+    {
+      "name": "隔离开关机械寿命",
+      "value": "≥10000",
+      "unit": "次",
+      "original_text": "三相机械稳定性操作次数不少于 10000 次"
+    },
+    {
+      "name": "隔离开关接点开断能力",
+      "value": "DC220V, 2.5A",
+      "unit": "DC220V, 2.5A",
+      "original_text": "接点开断能力为 DC220V ， 2.5A 。"
+    },
+    {
+      "name": "快速接地开关额定电压",
+      "value": "72.5kV",
+      "unit": "kV",
+      "original_text": "a. 额定电压 72.5kV"
+    },
+    {
+      "name": "快速接地开关额定频率",
+      "value": "50Hz",
+      "unit": "Hz",
+      "original_text": "b. 额定频率 50Hz"
+    },
+    {
+      "name": "快速接地开关额定短时耐受电流",
+      "value": "31.5",
+      "unit": "kA",
+      "original_text": "额定短时耐受电流（有效值） 31.5kA"
+    },
+    {
+      "name": "快速接地开关额定峰值耐受电流",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "额定峰值耐受电流（峰值） 100kA"
+    },
+    {
+      "name": "快速接地开关额定短路关合电流",
+      "value": "≥ 2",
+      "unit": "",
+      "original_text": "额定短路电流关合次数 ≥ 2"
+    },
+    {
+      "name": "快速接地开关快速合闸时间",
+      "value": "<0.1",
+      "unit": "s",
+      "original_text": "快速合闸时间 <0.1s"
+    },
+    {
+      "name": "快速接地开关关合短路电流能力",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "关合短路电流的能力 100kA"
+    },
+    {
+      "name": "快速接地开关主回路电阻",
+      "value": "< 100",
+      "unit": "μΩ",
+      "original_text": "接地开关主回路接触电阻 < 100 μΩ"
+    },
+    {
+      "name": "快速接地开关机械寿命",
+      "value": "≥ 5000",
+      "unit": "次",
+      "original_text": "机械寿命：在不检修、不调整、不更换零部件的情况下，三相机械稳定性操作次数不少于 5000 次。"
+    },
+    {
+      "name": "快速接地开关操动机构电源",
+      "value": "交流 50Hz 、 380/220V 三相五线制",
+      "unit": "",
+      "original_text": "操动机构的电源为交流 50Hz 、 380/220V 三相五线制。"
+    },
+    {
+      "name": "快速接地开关操作控制回路电源",
+      "value": "直流 220V",
+      "unit": "",
+      "original_text": "操作控制回路电源为直流 220V 。"
+    },
+    {
+      "name": "快速接地开关备用接点数量",
+      "value": "常开与常闭接点各 8 对",
+      "unit": "",
+      "original_text": "每台检修接地开关需有备用的常开与常闭接点各 8 对，备用接点都应引接到现地控制柜。"
+    },
+    {
+      "name": "快速接地开关接点开断能力",
+      "value": "DC220V，5A",
+      "unit": "",
+      "original_text": "接点的开断能力为 DC220V ， 5A 。"
+    },
+    {
+      "name": "检修接地开关额定电压",
+      "value": "72.5kV",
+      "unit": "kV",
+      "original_text": "a. 额定电压 72.5kV"
+    },
+    {
+      "name": "检修接地开关额定频率",
+      "value": "50Hz",
+      "unit": "Hz",
+      "original_text": "b. 额定频率 50Hz"
+    },
+    {
+      "name": "检修接地开关额定短时耐受电流",
+      "value": "31.5kA",
+      "unit": "kA",
+      "original_text": "c. 额定短时耐受电流（有效值） 31.5kA"
+    },
+    {
+      "name": "检修接地开关主回路电阻",
+      "value": "<1000μΩ",
+      "unit": "μΩ",
+      "original_text": "g. 接地开关主回路接触电阻 < 1000 μΩ"
+    },
+    {
+      "name": "检修接地开关接点开断能力",
+      "value": "DC220V, 5A",
+      "unit": "DC220V, 5A",
+      "original_text": "接点的开断能力为 DC220V ， 5A 。"
+    },
+    {
+      "name": "检修接地开关备用接点数量",
+      "value": "常开与常闭接点各8对",
+      "unit": "对",
+      "original_text": "每台检修接地开关需有备用的常开与常闭接点各 8 对"
+    },
+    {
+      "name": "检修接地开关额定峰值耐受电流",
+      "value": "100kA",
+      "unit": "kA",
+      "original_text": "e. 额定峰值耐受电流（峰值） 100kA"
+    },
+    {
+      "name": "检修接地开关机械寿命",
+      "value": "不少于5000次",
+      "unit": "次",
+      "original_text": "机械寿命：在不检修、不调整、不更换零部件、的情况下，三相机械稳定性 操作次数不少于 5000 次。"
+    },
+    {
+      "name": "检修接地开关操动机构电源",
+      "value": "交流 50Hz 、 380/220V 三相五线制",
+      "unit": "AC 380/220V",
+      "original_text": "操动机构的电源为交流 50Hz 、 380/220V 三相五线制。"
+    },
+    {
+      "name": "检修接地开关操作控制回路电源",
+      "value": "直流 220V",
+      "unit": "DC220V",
+      "original_text": "操作控制回路电源为直流 220V 。"
+    },
+    {
+      "name": "电流互感器额定电压",
+      "value": "66",
+      "unit": "kV",
+      "original_text": "额定电压 66kV"
+    },
+    {
+      "name": "电流互感器最高工作电压",
+      "value": "72.5",
+      "unit": "kV",
+      "original_text": "最高工作电压 72.5kV"
+    },
+    {
+      "name": "电流互感器额定动稳定电流",
+      "value": "100",
+      "unit": "kA",
+      "original_text": "额定动稳定电流 100kA （峰值）"
+    },
+    {
+      "name": "电流互感器额定热稳定电流",
+      "value": "31.5",
+      "unit": "kA",
+      "original_text": "额定热稳定电流 31.5kA （有效值）"
+    },
+    {
+      "name": "电流互感器一次绕组材料",
+      "value": "SF6 气体",
+      "unit": "",
+      "original_text": "绝缘材料：-次绕组 SF6 气体"
+    },
+    {
+      "name": "电流互感器二次绕组绝缘材料",
+      "value": "环氧树脂或纸膜绝缘",
+      "unit": "",
+      "original_text": "二次绕组 环氧树脂或纸膜绝缘"
+    },
+    {
+      "name": "电压互感器一次绕组额定电压",
+      "value": "66/3",
+      "unit": "kV",
+      "original_text": "额定电压：-次绕组 66/ 3 k V"
+    },
+    {
+      "name": "电压互感器二次绕组额定电压",
+      "value": "0.1/3",
+      "unit": "kV",
+      "original_text": "二次绕组 0.1/ 3 k V ； 0.1/ 3 k V ； 0.1/ 3 k V ；"
+    },
+    {
+      "name": "电压互感器剩余绕组额定电压",
+      "value": "0.1/3",
+      "unit": "kV",
+      "original_text": "剩余绕组 0.1/3kV"
+    },
+    {
+      "name": "电压互感器最高工作电压",
+      "value": "72.5",
+      "unit": "kV",
+      "original_text": "最高工作电压 72.5kV"
+    },
+    {
+      "name": "电压互感器一次绕组材料",
+      "value": "SF6 气体",
+      "unit": "",
+      "original_text": "绝缘材料：-次绕组 SF6 气体"
+    },
+    {
+      "name": "电压互感器二次绕组材料",
+      "value": "环氧树脂",
+      "unit": "",
+      "original_text": "二次绕组 环氧树脂"
+    },
+    {
+      "name": "母线结构",
+      "value": "SF6气体绝缘封闭结构，主母线及分支母线采用三相共筒式或分相式",
+      "unit": "",
+      "original_text": "GIS 母线为 SF6 气体绝缘封闭结构， 主母线及分支母线采用三相共筒式或分相 式。母线的导体用绝缘子支承在外壳内。"
+    },
+    {
+      "name": "母线导体材质",
+      "value": "高导电率的铝合金或电解铜",
+      "unit": "",
+      "original_text": "母线导体材质为高导电率的铝合金或电解铜。"
+    },
+    {
+      "name": "控制柜制造材料",
+      "value": "316亚光不锈钢",
+      "unit": "",
+      "original_text": "控制柜（包括操动机构箱）采用 316 亚光不锈钢制造"
+    },
+    {
+      "name": "控制柜备用端子数量",
+      "value": "20%",
+      "unit": "百分比",
+      "original_text": "并有 20  备用端子，端子应为压接式"
+    },
+    {
+      "name": "控制柜柜内电缆型号",
+      "value": "船用A类阻燃电缆，保护、控制回路电缆为船用A类阻燃耐火电缆",
+      "unit": "",
+      "original_text": "所有电缆应采用船用 A 类阻燃电缆，其中保护、控制回路电缆应为船用 A 类阻燃耐火电缆。"
+    },
+    {
+      "name": "六氟化硫气体参数湿度",
+      "value": "≤8μg/g（新气体）；交接验收值：≤150μL/L（有电弧分解物的隔室），≤250μL/L（无电弧分解物的隔室）；运行值：≤300μL/L（有电弧分解物的隔室），≤500μL/L（无电弧分解物的隔室）",
+      "unit": "μg/g, μL/L",
+      "original_text": "湿度（ H$_{2}$O ）≤ 8 μ g/g（新气体）；SF$_{6}$ 气体水分允许含量（ 20 ℃ 时， μ L/L ）交接验收值：≤ 150（有电弧分解物的隔室），≤ 250（无电弧分解物的隔室）；运行值：≤ 300（有电弧分解物的隔室），≤ 500（无电弧分解物的隔室）"
+    },
+    {
+      "name": "六氟化硫气体参数酸度",
+      "value": "≤0.3μg/g（以HF计）",
+      "unit": "μg/g",
+      "original_text": "酸度（以 HF 计）≤ 0.3 μ g/g"
+    }
+  ],
+  "not_found": [
+    "断路器主回路电阻",
+    "断路器分闸速度",
+    "断路器合闸速度",
+    "隔离开关主回路电阻",
+    "电压互感器击穿电压峰值"
+  ]
+}

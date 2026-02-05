@@ -1,0 +1,1727 @@
+{
+  "extraction_file": "output/ex110_az_02_04_1413.json",
+  "spec_database": "spec_database.json",
+  "compare_time": "2026-02-04T15:28:49.014823",
+  "model": "azure/gpt-4.1",
+  "statistics": {
+    "total": 105,
+    "compliant": 43,
+    "non_compliant": 22,
+    "no_match": 39,
+    "uncertain": 1
+  },
+  "type_statistics": {
+    "A": {
+      "compliant": 13,
+      "non_compliant": 12
+    },
+    "B": {
+      "compliant": 4,
+      "non_compliant": 5
+    },
+    "C": {
+      "compliant": 0,
+      "non_compliant": 0
+    },
+    "D": {
+      "compliant": 26,
+      "non_compliant": 5
+    }
+  },
+  "type_definitions": {
+    "A": "关键参数，不可变更",
+    "B": "变更需提交审核",
+    "C": "可根据情况调整",
+    "D": "通用参数，变更需特殊申请"
+  },
+  "compliant_params": [
+    {
+      "user_param_name": "GIS整体额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": "GIS额定电压",
+      "spec_value": "145kV",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": "GIS额定频率",
+      "spec_value": "50/60 Hz",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定电流",
+      "user_value": "3150A",
+      "matched_spec_name": "GIS额定电流",
+      "spec_value": "2500/3150 A",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定短时耐受电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "GIS额定短时耐受电流及持续时间",
+      "spec_value": "40kA/3s",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定峰值耐受电流",
+      "user_value": "100kA",
+      "matched_spec_name": "GIS额定峰值耐受电流",
+      "spec_value": "108kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定工频耐受电压（断口间极间）",
+      "user_value": "160kV",
+      "matched_spec_name": "GIS额定工频耐受电压（对地/相间）",
+      "spec_value": "275kV",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定工频耐受电压（隔离断口间）",
+      "user_value": "162+42kV",
+      "matched_spec_name": "GIS额定工频耐受电压（隔离断口）",
+      "spec_value": "315kV",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定雷电冲击耐受电压（断口间极间）",
+      "user_value": "380kV",
+      "matched_spec_name": "GIS额定雷电冲击耐受电压（对地/相间）",
+      "spec_value": "650kV",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定雷电冲击耐受电压（隔离断口间）",
+      "user_value": "350+60kV",
+      "matched_spec_name": "GIS额定雷电冲击耐受电压（隔离断口）",
+      "spec_value": "750kV",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS单个绝缘元件局部放电量",
+      "user_value": "≤2pC",
+      "matched_spec_name": "GIS单个绝缘件局部放电量",
+      "spec_value": "≤2pC",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS组装整体局部放电量",
+      "user_value": "≤5pC",
+      "matched_spec_name": "GIS每个间隔局部放电量",
+      "spec_value": "≤5pC",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体六氟化硫漏气率",
+      "user_value": "≤0.1%/年",
+      "matched_spec_name": "GIS每个隔室六氟化硫气体漏气率",
+      "spec_value": "≤0.1%/年",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器断口数",
+      "user_value": "1",
+      "matched_spec_name": "断路器断口数",
+      "spec_value": "1",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": "GIS额定频率",
+      "spec_value": "50/60 Hz",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定电流",
+      "user_value": "3150/1250A",
+      "matched_spec_name": "GIS额定电流",
+      "spec_value": "2500/3150 A",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定操作顺序",
+      "user_value": "O-0.3S-CO-180s-CO",
+      "matched_spec_name": "断路器额定操作顺序",
+      "spec_value": "O–0.3s–CO–180s–CO",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器重合闸无电流间隙时间",
+      "user_value": "≥0.3s",
+      "matched_spec_name": "断路器重合闸无电流间隙时间",
+      "spec_value": "≥300ms",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定短路开断电流交流分量",
+      "user_value": "31.5kA",
+      "matched_spec_name": "断路器额定短路开断电流交流分量",
+      "spec_value": "35kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器L75近距故障开断能力",
+      "user_value": "30kA",
+      "matched_spec_name": "断路器L75故障开合能力",
+      "spec_value": "30kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定短路关合电流",
+      "user_value": "100kA",
+      "matched_spec_name": "断路器额定短路关合电流",
+      "spec_value": "106kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器机械寿命",
+      "user_value": "≥10000次",
+      "matched_spec_name": "断路器机械寿命",
+      "spec_value": "≥10000次(M2级)",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定短路关合电流",
+      "user_value": "100kA",
+      "matched_spec_name": "断路器额定短路关合电流",
+      "spec_value": "106kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器长期持续运行电压",
+      "user_value": "≥ 72.5kV",
+      "matched_spec_name": "避雷器系统持续运行电压",
+      "spec_value": "75/78/79.6/84 kV",
+      "param_type": "B",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器标称放电电流",
+      "user_value": "10kA",
+      "matched_spec_name": "避雷器标称放电电流",
+      "spec_value": "10kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器直流1mA参考电压",
+      "user_value": "≥ 130kV",
+      "matched_spec_name": "避雷器直流1mA参考电压",
+      "spec_value": "140/145/148/157 kV",
+      "param_type": "B",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器标称放电电流下雷电冲击残压",
+      "user_value": "≤ 235kV",
+      "matched_spec_name": "避雷器标称放电电流下雷电冲击残压",
+      "spec_value": "238/248/254/268 kV",
+      "param_type": "B",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器标称放电电流下陡坡冲击残压",
+      "user_value": "≤ 264kV",
+      "matched_spec_name": "避雷器标称放电电流下陡坡冲击残压",
+      "spec_value": "267/277/283/300 kV",
+      "param_type": "B",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": "GIS额定电压",
+      "spec_value": "145kV",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": "GIS额定频率",
+      "spec_value": "50/60 Hz",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关额定短时耐受电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "隔离开关额定短时耐受电流",
+      "spec_value": "40kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关额定峰值耐受电流",
+      "user_value": "100kA",
+      "matched_spec_name": "隔离开关额定峰值耐受电流",
+      "spec_value": "106kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关分合电容电流",
+      "user_value": "1A",
+      "matched_spec_name": "隔离开关开合小电容电流值",
+      "spec_value": "1A",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关接点开断能力",
+      "user_value": "DC220V, 2.5A",
+      "matched_spec_name": "隔离开关触点开断能力",
+      "spec_value": "DC 220 V、2.5A 或DC 110 V、3.5A",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关接点开断能力",
+      "user_value": "DC220V, 2.5A",
+      "matched_spec_name": "隔离开关触点开断能力",
+      "spec_value": "DC 220 V、2.5A 或DC 110 V、3.5A",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "快速接地开关额定短时耐受电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "快速接地开关额定短时耐受电流",
+      "spec_value": "40kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "快速接地开关额定峰值耐受电流",
+      "user_value": "100kA",
+      "matched_spec_name": "快速接地开关额定峰值耐受电流",
+      "spec_value": "106kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "检修接地开关额定短时耐受电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "检修接地开关额定短时耐受电流",
+      "spec_value": "40kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "检修接地开关额定峰值耐受电流",
+      "user_value": "100kA",
+      "matched_spec_name": "检修接地开关额定峰值耐受电流",
+      "spec_value": "106kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "检修接地开关机械寿命",
+      "user_value": "不少于5000次",
+      "matched_spec_name": "检修接地开关机械稳定性",
+      "spec_value": "≥10000次",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "电流互感器额定动稳定电流",
+      "user_value": "100kA",
+      "matched_spec_name": "电流互感器额定短时耐受电流峰值",
+      "spec_value": "100kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "电流互感器额定热稳定电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "电流互感器额定短时耐受电流",
+      "spec_value": "40kA/3s",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "母线导体材质",
+      "user_value": "高导电率的铝合金或电解铜",
+      "matched_spec_name": "主母线材质",
+      "spec_value": "铝合金",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "六氟化硫气体参数湿度",
+      "user_value": "≤8μg/g（新气体）；交接验收值：≤150μL/L（有电弧分解物的隔室），≤250μL/L（无电弧分解物的隔室）；运行值：≤300μL/L（有电弧分解物的隔室），≤500μL/L（无电弧分解物的隔室）μg/g, μL/L",
+      "matched_spec_name": "六氟化硫气体参数湿度",
+      "spec_value": "≤8μg/g",
+      "param_type": "D",
+      "is_compliant": true
+    }
+  ],
+  "non_compliant_params": [
+    {
+      "user_param_name": "断路器开断时间",
+      "user_value": "≤50ms",
+      "matched_spec_name": "断路器开断时间",
+      "spec_value": "≤45ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器分闸时间",
+      "user_value": "≤40ms",
+      "matched_spec_name": "断路器分闸时间",
+      "spec_value": "≤28ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器合闸时间",
+      "user_value": "≤100ms",
+      "matched_spec_name": "断路器合闸时间",
+      "spec_value": "≤60ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器合分时间",
+      "user_value": "≤60ms",
+      "matched_spec_name": "断路器合分时间",
+      "spec_value": "≤30ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器分闸不同期性",
+      "user_value": "≤3ms",
+      "matched_spec_name": "断路器分闸不同期性",
+      "spec_value": "<3ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器合闸不同期性",
+      "user_value": "≤5ms",
+      "matched_spec_name": "断路器合闸不同期性",
+      "spec_value": "<3ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器备用接点数量（对）",
+      "user_value": "16对常开和16对常闭/每相对",
+      "matched_spec_name": "断路器备用接点数量（对）",
+      "spec_value": "8开5闭",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器操作噪声水平",
+      "user_value": "≤110dB",
+      "matched_spec_name": "GIS噪声水平",
+      "spec_value": "≤90dB",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "绝缘子局部放电量",
+      "user_value": "≤3pC",
+      "matched_spec_name": "GIS单个绝缘件局部放电量",
+      "spec_value": "≤2pC",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "避雷器系统额定电压",
+      "user_value": "66kV",
+      "matched_spec_name": "避雷器系统额定电压",
+      "spec_value": "110kV",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "避雷器额定电压",
+      "user_value": "90kV",
+      "matched_spec_name": "避雷器额定电压",
+      "spec_value": "96/100/102/108 kV",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "隔离开关操动机构电源",
+      "user_value": "交流 50Hz 、 380/220V 三相五线制AC 380/220V",
+      "matched_spec_name": "隔离开关操动机构电压",
+      "spec_value": "DC110/220 或 AC 220",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "隔离开关备用接点数量",
+      "user_value": "常开与常闭接点各10对",
+      "matched_spec_name": "隔离开关备用辅助触点数量（对）",
+      "spec_value": "4开4闭",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "隔离开关机械寿命",
+      "user_value": "≥10000次",
+      "matched_spec_name": "隔离开关机械寿命",
+      "spec_value": "≥10000次",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关关合短路电流能力",
+      "user_value": "100kA",
+      "matched_spec_name": "快速接地开关额定短路关合电流",
+      "spec_value": "95kA",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关机械寿命",
+      "user_value": "≥ 5000次",
+      "matched_spec_name": "快速接地开关机械稳定性",
+      "spec_value": "≥2000次",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关操动机构电源",
+      "user_value": "交流 50Hz 、 380/220V 三相五线制",
+      "matched_spec_name": "快速接地开关操动机构电源",
+      "spec_value": "DC 110/220或AC220（整流DC220）",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关备用接点数量",
+      "user_value": "常开与常闭接点各 8 对",
+      "matched_spec_name": "快速接地开关备用辅助触点数量（对）",
+      "spec_value": "4开4闭",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关接点开断能力",
+      "user_value": "DC220V，5A",
+      "matched_spec_name": "快速接地开关触点开断能力",
+      "spec_value": "DC 220 V、2.5 A或DC 110 V、3.5 A",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "检修接地开关接点开断能力",
+      "user_value": "DC220V, 5A",
+      "matched_spec_name": "检修接地开关触点开断能力",
+      "spec_value": "DC 220 V、2.5A或DC 110 V、3.5 A",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "检修接地开关备用接点数量",
+      "user_value": "常开与常闭接点各8对",
+      "matched_spec_name": "检修接地开关备用辅助触点数量（对）",
+      "spec_value": "4开4闭",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "检修接地开关操动机构电源",
+      "user_value": "交流 50Hz 、 380/220V 三相五线制AC 380/220V",
+      "matched_spec_name": "检修接地开关操动机构电源",
+      "spec_value": "DC 110/220或AC220（整流DC220）",
+      "param_type": "A",
+      "is_compliant": false
+    }
+  ],
+  "no_match_params": [
+    {
+      "user_param_name": "断路器额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器额定短路开断电流直流分量",
+      "user_value": "≥50%",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器TRV特性参数",
+      "user_value": "{\"100%\":{\"首相开断系数\":1.3,\"振幅系数\":1.4,\"恢复电压上升速度\":0.75},\"60%\":{\"首相开断系数\":1.3,\"振幅系数\":1.5,\"恢复电压上升速度\":1.85},\"30%\":{\"首相开断系数\":1.5,\"振幅系数\":1.5,\"恢复电压上升速度\":3.7},\"10%\":{\"首相开断系数\":1.5,\"振幅系数\":1.7,\"恢复电压上升速度\":3.7}}",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器最大电缆充电电流",
+      "user_value": "≥125A",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器空载变压器开断能力",
+      "user_value": "520MVA",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器L90近距故障开断能力",
+      "user_value": "36kA",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器L60近距故障开断能力",
+      "user_value": "24kA",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器25%额定开断电流",
+      "user_value": "10kA",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器工频恢复电压",
+      "user_value": "2.5倍额定相电压",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器暂态恢复电压值",
+      "user_value": "0.55kV/μs",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器备用接点开断能力",
+      "user_value": "DC220V, 5A",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器噪声水平测定位置",
+      "user_value": "2m",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "避雷器绝缘材料",
+      "user_value": "SF6",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "隔离开关分合电感电流",
+      "user_value": "6A",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "隔离开关操作控制回路电源",
+      "user_value": "DC220V",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关快速合闸时间",
+      "user_value": "<0.1s",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关主回路电阻",
+      "user_value": "< 100μΩ",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关操作控制回路电源",
+      "user_value": "直流 220V",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "检修接地开关额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "检修接地开关额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "检修接地开关主回路电阻",
+      "user_value": "<1000μΩ",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "检修接地开关操作控制回路电源",
+      "user_value": "直流 220VDC220V",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电流互感器额定电压",
+      "user_value": "66kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电流互感器最高工作电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电流互感器一次绕组材料",
+      "user_value": "SF6 气体",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电流互感器二次绕组绝缘材料",
+      "user_value": "环氧树脂或纸膜绝缘",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器一次绕组额定电压",
+      "user_value": "66/3kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器二次绕组额定电压",
+      "user_value": "0.1/3kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器剩余绕组额定电压",
+      "user_value": "0.1/3kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器最高工作电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器一次绕组材料",
+      "user_value": "SF6 气体",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器二次绕组材料",
+      "user_value": "环氧树脂",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "母线结构",
+      "user_value": "SF6气体绝缘封闭结构，主母线及分支母线采用三相共筒式或分相式",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "控制柜制造材料",
+      "user_value": "316亚光不锈钢",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "控制柜备用端子数量",
+      "user_value": "20%百分比",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "控制柜柜内电缆型号",
+      "user_value": "船用A类阻燃电缆，保护、控制回路电缆为船用A类阻燃耐火电缆",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "六氟化硫气体参数酸度",
+      "user_value": "≤0.3μg/g（以HF计）μg/g",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    }
+  ],
+  "uncertain_params": [
+    {
+      "user_param_name": "快速接地开关额定短路关合电流",
+      "user_value": "≥ 2",
+      "matched_spec_name": "快速接地开关额定短路关合电流",
+      "spec_value": "95kA",
+      "param_type": "D",
+      "is_compliant": null
+    }
+  ],
+  "all_results": [
+    {
+      "user_param_name": "GIS整体额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": "GIS额定电压",
+      "spec_value": "145kV",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": "GIS额定频率",
+      "spec_value": "50/60 Hz",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定电流",
+      "user_value": "3150A",
+      "matched_spec_name": "GIS额定电流",
+      "spec_value": "2500/3150 A",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定短时耐受电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "GIS额定短时耐受电流及持续时间",
+      "spec_value": "40kA/3s",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定峰值耐受电流",
+      "user_value": "100kA",
+      "matched_spec_name": "GIS额定峰值耐受电流",
+      "spec_value": "108kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定工频耐受电压（断口间极间）",
+      "user_value": "160kV",
+      "matched_spec_name": "GIS额定工频耐受电压（对地/相间）",
+      "spec_value": "275kV",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定工频耐受电压（隔离断口间）",
+      "user_value": "162+42kV",
+      "matched_spec_name": "GIS额定工频耐受电压（隔离断口）",
+      "spec_value": "315kV",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定雷电冲击耐受电压（断口间极间）",
+      "user_value": "380kV",
+      "matched_spec_name": "GIS额定雷电冲击耐受电压（对地/相间）",
+      "spec_value": "650kV",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体额定雷电冲击耐受电压（隔离断口间）",
+      "user_value": "350+60kV",
+      "matched_spec_name": "GIS额定雷电冲击耐受电压（隔离断口）",
+      "spec_value": "750kV",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS单个绝缘元件局部放电量",
+      "user_value": "≤2pC",
+      "matched_spec_name": "GIS单个绝缘件局部放电量",
+      "spec_value": "≤2pC",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS组装整体局部放电量",
+      "user_value": "≤5pC",
+      "matched_spec_name": "GIS每个间隔局部放电量",
+      "spec_value": "≤5pC",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "GIS整体六氟化硫漏气率",
+      "user_value": "≤0.1%/年",
+      "matched_spec_name": "GIS每个隔室六氟化硫气体漏气率",
+      "spec_value": "≤0.1%/年",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器断口数",
+      "user_value": "1",
+      "matched_spec_name": "断路器断口数",
+      "spec_value": "1",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": "GIS额定频率",
+      "spec_value": "50/60 Hz",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定电流",
+      "user_value": "3150/1250A",
+      "matched_spec_name": "GIS额定电流",
+      "spec_value": "2500/3150 A",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定操作顺序",
+      "user_value": "O-0.3S-CO-180s-CO",
+      "matched_spec_name": "断路器额定操作顺序",
+      "spec_value": "O–0.3s–CO–180s–CO",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器开断时间",
+      "user_value": "≤50ms",
+      "matched_spec_name": "断路器开断时间",
+      "spec_value": "≤45ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器分闸时间",
+      "user_value": "≤40ms",
+      "matched_spec_name": "断路器分闸时间",
+      "spec_value": "≤28ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器合闸时间",
+      "user_value": "≤100ms",
+      "matched_spec_name": "断路器合闸时间",
+      "spec_value": "≤60ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器合分时间",
+      "user_value": "≤60ms",
+      "matched_spec_name": "断路器合分时间",
+      "spec_value": "≤30ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器重合闸无电流间隙时间",
+      "user_value": "≥0.3s",
+      "matched_spec_name": "断路器重合闸无电流间隙时间",
+      "spec_value": "≥300ms",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器分闸不同期性",
+      "user_value": "≤3ms",
+      "matched_spec_name": "断路器分闸不同期性",
+      "spec_value": "<3ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器合闸不同期性",
+      "user_value": "≤5ms",
+      "matched_spec_name": "断路器合闸不同期性",
+      "spec_value": "<3ms",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器额定短路开断电流交流分量",
+      "user_value": "31.5kA",
+      "matched_spec_name": "断路器额定短路开断电流交流分量",
+      "spec_value": "35kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定短路开断电流直流分量",
+      "user_value": "≥50%",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器TRV特性参数",
+      "user_value": "{\"100%\":{\"首相开断系数\":1.3,\"振幅系数\":1.4,\"恢复电压上升速度\":0.75},\"60%\":{\"首相开断系数\":1.3,\"振幅系数\":1.5,\"恢复电压上升速度\":1.85},\"30%\":{\"首相开断系数\":1.5,\"振幅系数\":1.5,\"恢复电压上升速度\":3.7},\"10%\":{\"首相开断系数\":1.5,\"振幅系数\":1.7,\"恢复电压上升速度\":3.7}}",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器最大电缆充电电流",
+      "user_value": "≥125A",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器空载变压器开断能力",
+      "user_value": "520MVA",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器L90近距故障开断能力",
+      "user_value": "36kA",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器L75近距故障开断能力",
+      "user_value": "30kA",
+      "matched_spec_name": "断路器L75故障开合能力",
+      "spec_value": "30kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器L60近距故障开断能力",
+      "user_value": "24kA",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器25%额定开断电流",
+      "user_value": "10kA",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器工频恢复电压",
+      "user_value": "2.5倍额定相电压",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器暂态恢复电压值",
+      "user_value": "0.55kV/μs",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器额定短路关合电流",
+      "user_value": "100kA",
+      "matched_spec_name": "断路器额定短路关合电流",
+      "spec_value": "106kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器备用接点数量（对）",
+      "user_value": "16对常开和16对常闭/每相对",
+      "matched_spec_name": "断路器备用接点数量（对）",
+      "spec_value": "8开5闭",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器备用接点开断能力",
+      "user_value": "DC220V, 5A",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "断路器机械寿命",
+      "user_value": "≥10000次",
+      "matched_spec_name": "断路器机械寿命",
+      "spec_value": "≥10000次(M2级)",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器额定短路关合电流",
+      "user_value": "100kA",
+      "matched_spec_name": "断路器额定短路关合电流",
+      "spec_value": "106kA",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "断路器操作噪声水平",
+      "user_value": "≤110dB",
+      "matched_spec_name": "GIS噪声水平",
+      "spec_value": "≤90dB",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "断路器噪声水平测定位置",
+      "user_value": "2m",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "绝缘子局部放电量",
+      "user_value": "≤3pC",
+      "matched_spec_name": "GIS单个绝缘件局部放电量",
+      "spec_value": "≤2pC",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "避雷器绝缘材料",
+      "user_value": "SF6",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "避雷器系统额定电压",
+      "user_value": "66kV",
+      "matched_spec_name": "避雷器系统额定电压",
+      "spec_value": "110kV",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "避雷器额定电压",
+      "user_value": "90kV",
+      "matched_spec_name": "避雷器额定电压",
+      "spec_value": "96/100/102/108 kV",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "避雷器长期持续运行电压",
+      "user_value": "≥ 72.5kV",
+      "matched_spec_name": "避雷器系统持续运行电压",
+      "spec_value": "75/78/79.6/84 kV",
+      "param_type": "B",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器标称放电电流",
+      "user_value": "10kA",
+      "matched_spec_name": "避雷器标称放电电流",
+      "spec_value": "10kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器直流1mA参考电压",
+      "user_value": "≥ 130kV",
+      "matched_spec_name": "避雷器直流1mA参考电压",
+      "spec_value": "140/145/148/157 kV",
+      "param_type": "B",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器标称放电电流下雷电冲击残压",
+      "user_value": "≤ 235kV",
+      "matched_spec_name": "避雷器标称放电电流下雷电冲击残压",
+      "spec_value": "238/248/254/268 kV",
+      "param_type": "B",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "避雷器标称放电电流下陡坡冲击残压",
+      "user_value": "≤ 264kV",
+      "matched_spec_name": "避雷器标称放电电流下陡坡冲击残压",
+      "spec_value": "267/277/283/300 kV",
+      "param_type": "B",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": "GIS额定电压",
+      "spec_value": "145kV",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": "GIS额定频率",
+      "spec_value": "50/60 Hz",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关额定短时耐受电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "隔离开关额定短时耐受电流",
+      "spec_value": "40kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关额定峰值耐受电流",
+      "user_value": "100kA",
+      "matched_spec_name": "隔离开关额定峰值耐受电流",
+      "spec_value": "106kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关分合电感电流",
+      "user_value": "6A",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "隔离开关分合电容电流",
+      "user_value": "1A",
+      "matched_spec_name": "隔离开关开合小电容电流值",
+      "spec_value": "1A",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关操动机构电源",
+      "user_value": "交流 50Hz 、 380/220V 三相五线制AC 380/220V",
+      "matched_spec_name": "隔离开关操动机构电压",
+      "spec_value": "DC110/220 或 AC 220",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "隔离开关操作控制回路电源",
+      "user_value": "DC220V",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "隔离开关备用接点数量",
+      "user_value": "常开与常闭接点各10对",
+      "matched_spec_name": "隔离开关备用辅助触点数量（对）",
+      "spec_value": "4开4闭",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "隔离开关接点开断能力",
+      "user_value": "DC220V, 2.5A",
+      "matched_spec_name": "隔离开关触点开断能力",
+      "spec_value": "DC 220 V、2.5A 或DC 110 V、3.5A",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "隔离开关机械寿命",
+      "user_value": "≥10000次",
+      "matched_spec_name": "隔离开关机械寿命",
+      "spec_value": "≥10000次",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "隔离开关接点开断能力",
+      "user_value": "DC220V, 2.5A",
+      "matched_spec_name": "隔离开关触点开断能力",
+      "spec_value": "DC 220 V、2.5A 或DC 110 V、3.5A",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "快速接地开关额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关额定短时耐受电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "快速接地开关额定短时耐受电流",
+      "spec_value": "40kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "快速接地开关额定峰值耐受电流",
+      "user_value": "100kA",
+      "matched_spec_name": "快速接地开关额定峰值耐受电流",
+      "spec_value": "106kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "快速接地开关额定短路关合电流",
+      "user_value": "≥ 2",
+      "matched_spec_name": "快速接地开关额定短路关合电流",
+      "spec_value": "95kA",
+      "param_type": "D",
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关快速合闸时间",
+      "user_value": "<0.1s",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关关合短路电流能力",
+      "user_value": "100kA",
+      "matched_spec_name": "快速接地开关额定短路关合电流",
+      "spec_value": "95kA",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关主回路电阻",
+      "user_value": "< 100μΩ",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关机械寿命",
+      "user_value": "≥ 5000次",
+      "matched_spec_name": "快速接地开关机械稳定性",
+      "spec_value": "≥2000次",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关操动机构电源",
+      "user_value": "交流 50Hz 、 380/220V 三相五线制",
+      "matched_spec_name": "快速接地开关操动机构电源",
+      "spec_value": "DC 110/220或AC220（整流DC220）",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关操作控制回路电源",
+      "user_value": "直流 220V",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "快速接地开关备用接点数量",
+      "user_value": "常开与常闭接点各 8 对",
+      "matched_spec_name": "快速接地开关备用辅助触点数量（对）",
+      "spec_value": "4开4闭",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "快速接地开关接点开断能力",
+      "user_value": "DC220V，5A",
+      "matched_spec_name": "快速接地开关触点开断能力",
+      "spec_value": "DC 220 V、2.5 A或DC 110 V、3.5 A",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "检修接地开关额定电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "检修接地开关额定频率",
+      "user_value": "50Hz",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "检修接地开关额定短时耐受电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "检修接地开关额定短时耐受电流",
+      "spec_value": "40kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "检修接地开关主回路电阻",
+      "user_value": "<1000μΩ",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "检修接地开关接点开断能力",
+      "user_value": "DC220V, 5A",
+      "matched_spec_name": "检修接地开关触点开断能力",
+      "spec_value": "DC 220 V、2.5A或DC 110 V、3.5 A",
+      "param_type": "D",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "检修接地开关备用接点数量",
+      "user_value": "常开与常闭接点各8对",
+      "matched_spec_name": "检修接地开关备用辅助触点数量（对）",
+      "spec_value": "4开4闭",
+      "param_type": "B",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "检修接地开关额定峰值耐受电流",
+      "user_value": "100kA",
+      "matched_spec_name": "检修接地开关额定峰值耐受电流",
+      "spec_value": "106kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "检修接地开关机械寿命",
+      "user_value": "不少于5000次",
+      "matched_spec_name": "检修接地开关机械稳定性",
+      "spec_value": "≥10000次",
+      "param_type": "A",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "检修接地开关操动机构电源",
+      "user_value": "交流 50Hz 、 380/220V 三相五线制AC 380/220V",
+      "matched_spec_name": "检修接地开关操动机构电源",
+      "spec_value": "DC 110/220或AC220（整流DC220）",
+      "param_type": "A",
+      "is_compliant": false
+    },
+    {
+      "user_param_name": "检修接地开关操作控制回路电源",
+      "user_value": "直流 220VDC220V",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电流互感器额定电压",
+      "user_value": "66kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电流互感器最高工作电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电流互感器额定动稳定电流",
+      "user_value": "100kA",
+      "matched_spec_name": "电流互感器额定短时耐受电流峰值",
+      "spec_value": "100kA",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "电流互感器额定热稳定电流",
+      "user_value": "31.5kA",
+      "matched_spec_name": "电流互感器额定短时耐受电流",
+      "spec_value": "40kA/3s",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "电流互感器一次绕组材料",
+      "user_value": "SF6 气体",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电流互感器二次绕组绝缘材料",
+      "user_value": "环氧树脂或纸膜绝缘",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器一次绕组额定电压",
+      "user_value": "66/3kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器二次绕组额定电压",
+      "user_value": "0.1/3kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器剩余绕组额定电压",
+      "user_value": "0.1/3kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器最高工作电压",
+      "user_value": "72.5kV",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器一次绕组材料",
+      "user_value": "SF6 气体",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "电压互感器二次绕组材料",
+      "user_value": "环氧树脂",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "母线结构",
+      "user_value": "SF6气体绝缘封闭结构，主母线及分支母线采用三相共筒式或分相式",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "母线导体材质",
+      "user_value": "高导电率的铝合金或电解铜",
+      "matched_spec_name": "主母线材质",
+      "spec_value": "铝合金",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "控制柜制造材料",
+      "user_value": "316亚光不锈钢",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "控制柜备用端子数量",
+      "user_value": "20%百分比",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "控制柜柜内电缆型号",
+      "user_value": "船用A类阻燃电缆，保护、控制回路电缆为船用A类阻燃耐火电缆",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    },
+    {
+      "user_param_name": "六氟化硫气体参数湿度",
+      "user_value": "≤8μg/g（新气体）；交接验收值：≤150μL/L（有电弧分解物的隔室），≤250μL/L（无电弧分解物的隔室）；运行值：≤300μL/L（有电弧分解物的隔室），≤500μL/L（无电弧分解物的隔室）μg/g, μL/L",
+      "matched_spec_name": "六氟化硫气体参数湿度",
+      "spec_value": "≤8μg/g",
+      "param_type": "D",
+      "is_compliant": true
+    },
+    {
+      "user_param_name": "六氟化硫气体参数酸度",
+      "user_value": "≤0.3μg/g（以HF计）μg/g",
+      "matched_spec_name": null,
+      "spec_value": null,
+      "param_type": null,
+      "is_compliant": null
+    }
+  ]
+}
