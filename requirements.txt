@@ -1,29 +1,13 @@
-# 核心Web框架（精确版本）
-streamlit==1.40.0
-# 文档解析依赖（降低版本适配旧pip）
-docling==2.4.0
-docling-parse==2.0.0
-# LlamaIndex全家桶（精确版本，确保兼容）
-llama-index==0.12.22
-llama-index-node-parser-docling==0.3.0
-llama-index-readers-docling==0.3.0
-llama-index-embeddings-huggingface==0.4.0
-llama-index-llms-huggingface-api==0.3.0
-llama-index-readers-file==0.4.0
-llama-index-llms-litellm==0.3.0
-# LLM调用（精确版本）
-litellm==1.52.10
-# 文件/数据处理（精确版本）
-pymupdf==1.24.14
-pandas==2.0.0
-openpyxl==3.1.0
-python-dotenv==1.0.1
-# 日志/显示（精确兼容版本）
-rich==13.7.0
-markdown-it-py==2.2.0
-pygments==2.15.0
-mdurl==0.1.2
-# 模型API（精确版本）
-openai==1.0.0
-dashscope==1.10.0
-anthropic==0.20.0
+# 核心Web框架（超稳定旧版本）
+streamlit==1.30.0
+# 文档解析（基础版本，减少依赖）
+docling==2.0.0
+# LlamaIndex基础功能（仅保留核心）
+llama-index==0.10.0
+llama-index-readers-file==0.2.0
+# 数据处理（基础版本）
+pandas==1.5.3
+openpyxl==3.0.10
+python-dotenv==1.0.0
+# 日志显示（无冲突版本）
+rich==10.14.0
