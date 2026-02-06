@@ -1,34 +1,29 @@
-# 优先更新pip到最新兼容版本（解决依赖解析失败核心问题）
-pip>=26.0.1
-# 基础依赖（保留原有并补充缺失项）
-jupyter>=1.1.1
+# 核心Web框架
+streamlit>=1.40.0
+# 文档解析依赖
 docling==2.5.2
 docling-parse==2.0.4
-llama-index>=0.12.0
+# LlamaIndex相关（固定兼容版本）
+llama-index==0.12.22
+llama-index-node-parser-docling==0.3.0
+llama-index-readers-docling==0.3.0
+llama-index-embeddings-huggingface==0.4.0
+llama-index-llms-huggingface-api==0.3.0
+llama-index-readers-file==0.4.0
+llama-index-llms-litellm==0.3.0
+# LLM调用依赖
 litellm>=1.52.10
-ipykernel>=6.29.5
-llama-index-node-parser-docling>=0.3.0
-llama-index-readers-docling>=0.3.0
-llama-index-embeddings-huggingface>=0.4.0
-llama-index-llms-huggingface-api>=0.3.0
-llama-index-readers-file>=0.4.0
-python-dotenv>=1.0.1
-llama-index-llms-litellm>=0.3.0
+# 文件/数据处理
 pymupdf>=1.24.14
-python-fasthtml>=0.12.0
-aiofiles>=24.1.0
-pyarrow>=14.0.0 --only-binary=:all:
-# Web界面依赖（保留原有，补充部署必需包）
-streamlit>=1.40.0
-openpyxl>=3.1.0
-rich>=13.0.0,<15.0.0  # 解决日志捕获模块依赖
-markdown-it-py>=2.2.0,<5.0.0  # rich的依赖项
-pygments>=2.13.0,<3.0.0  # 代码高亮依赖
-mdurl>=0.1.0,<0.2.0  # markdown解析依赖
-# 模型API依赖（代码中用到的模型提供商必需）
-openai>=1.0.0  # OpenAI/Azure OpenAI
-dashscope>=1.10.0  # 阿里云通义千问
-anthropic>=0.20.0  # Anthropic Claude
-deepseek>=0.1.0  # DeepSeek模型
-# 数据处理依赖（导出Excel、参数处理必需）
 pandas>=2.0.0
+openpyxl>=3.1.0
+python-dotenv>=1.0.1
+# 日志/显示依赖（固定无冲突版本）
+rich==13.7.0
+markdown-it-py==2.2.0
+pygments==2.15.0
+mdurl==0.1.2
+# 模型API依赖（按需保留，不用的可以删掉）
+openai>=1.0.0
+dashscope>=1.10.0
+anthropic>=0.20.0
